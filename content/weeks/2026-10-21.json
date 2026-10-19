@@ -3,63 +3,87 @@
   "label": "October 21 Team Meeting",
   "screens": [
     {
-      "title": "Welcome to The Flint Focus",
+      "title": "Why The Flint Focus",
       "paras": [
-        "Starting this week, all our announcements, updates, and dates live here instead of in the team meeting. A new Flint Focus goes up every Tuesday at 5:00 PM.",
-        "Each screen has one quick question to check you've got it. At the end, you'll confirm you've read everything. Please finish by 12:00 PM on Wednesday."
+        "Starting this week, announcements, updates, and dates live here instead of in our team meetings. A new Flint Focus goes up every Tuesday at 5:00 PM, and the password is in that day's email.",
+        "Here's why. I don't want our meetings to be me telling you to do this by that date. I'd rather we spend that time on things we do together: learning from each other, working at our tables, and having some fun.",
+        "Each screen has a quick check. Finish by 12:00 PM Wednesday and confirm at the end."
       ],
       "check": {
-        "q": "When should you finish The Flint Focus each week?",
-        "options": ["By 12:00 PM Wednesday", "During the team meeting", "Whenever you get to it"],
+        "q": "Why did announcements move here?",
+        "options": [
+          "So meetings can be about working together, not listening to James",
+          "So meetings can be canceled",
+          "So you don't have to come to meetings"
+        ],
         "answer": 0
       }
     },
     {
-      "title": "Our new meeting format",
+      "title": "Our meetings, our pace",
       "paras": [
-        "Meetings now run 8:30 to 9:30 PM, and most of that time is spent working at your tables instead of listening to me.",
-        "One expectation: side conversations pull everyone off track. If it happens, I'll give one reminder. If it keeps happening, I'll ask you to step out, and we'll set up a 1:1 so you can catch up on what you missed."
+        "How long a meeting takes is up to all of us. Each agenda has a pace built in. When we stay with it, we get through everything and get out sooner.",
+        "Several of you have told me the side conversations and running comments make meetings feel longer than they need to be. I hear that. This format is part of the fix. The rest is on all of us: respect each other's time and stay with the room."
       ],
       "check": {
-        "q": "What happens if side conversations keep going after a reminder?",
-        "options": ["Nothing, as long as it's quiet", "You'll be asked to step out and set up a 1:1", "You'll be moved to a different table"],
+        "q": "What decides how long our meetings take?",
+        "options": [
+          "The clock: it's always an hour",
+          "How well we all stay with the agenda",
+          "Whatever James decides"
+        ],
         "answer": 1
       }
     },
     {
       "title": "For Wednesday",
       "list": [
-        ["Warm-up", "Show and Tell, facilitated by Jazera. If you're bringing something in person, don't forget it."],
-        ["Developmental content", "We'll read a short Roompact article together at our tables. Nothing to read ahead of time."],
-        ["Building Check-In", "Come ready to talk about what's happening on your floor."]
+        [
+          "Warm-up",
+          "Show and Tell, facilitated by Jazera. If you're bringing something in person, don't forget it."
+        ],
+        [
+          "Building Check-In",
+          "Come ready to talk about what's happening on your floor."
+        ],
+        [
+          "Developmental content",
+          "We'll read a short Roompact article together at our tables. Nothing to read ahead of time."
+        ],
+        [
+          "Work session",
+          "We'll end with prep for Home Sweet Flint (Thursday 10/22, 4–7 PM). First up, everyone makes a model book cover on a 3x5 card so residents have good examples. Table tasks to follow."
+        ]
       ],
       "check": {
-        "q": "Who is facilitating the warm-up this week?",
-        "options": ["James", "Jazera", "Whoever volunteers"],
-        "answer": 1
-      }
-    },
-    {
-      "title": "This week's challenge: Expectations",
-      "paras": [
-        "Talk with three residents about what they expected life in Flint to be like. Where have their expectations been met, and where has it been different?",
-        "We'll check in on it at next week's meeting."
-      ],
-      "check": {
-        "q": "How many residents should you talk with this week?",
-        "options": ["One", "Three", "Your whole floor"],
+        "q": "What will everyone make first in the work session?",
+        "options": [
+          "A poster for the lobby",
+          "A model book cover on a 3x5 card",
+          "A bulletin board"
+        ],
         "answer": 1
       }
     },
     {
       "title": "Support your teammates",
       "list": [
-        ["RENT", "Henry is in the chorus. The show runs through Sunday, October 25."],
-        ["FYP Haunted House", "Rem is helping out. Friday and Saturday, October 23 and 24, at 7:00 PM in Walters Hall."]
+        [
+          "RENT",
+          "Henry is in the chorus. The show runs through Sunday, October 25."
+        ],
+        [
+          "FYP Haunted House",
+          "Rem is helping out. Friday and Saturday, October 23 and 24, at 7:00 PM in Walters Hall."
+        ]
       ],
       "check": {
         "q": "Where is the FYP Haunted House?",
-        "options": ["Walters Hall", "Schine Student Center", "Flint Hall"],
+        "options": [
+          "Walters Hall",
+          "Schine Student Center",
+          "Flint Hall"
+        ],
         "answer": 0
       }
     }

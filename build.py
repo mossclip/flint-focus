@@ -87,7 +87,7 @@ def week_body(w, latest):
     eyebrow = "This week" if latest else "Past week"
     parts = [f'<div class="week" data-week="{e(w["date"])}">',
              f'<p class="eyebrow">{eyebrow}</p><h1>{e(w["label"])}</h1>',
-             f'<p class="meta">Wednesday, {e(site["meeting_time"])}</p>',
+             f'<p class="meta">Read by {e(site["confirm_by"])}</p>',
              f'<div class="progress" aria-hidden="true"><div class="bar"></div></div>',
              '<div class="screens">']
     for i, s in enumerate(screens):
@@ -130,14 +130,16 @@ how = f"""<p class="eyebrow">The basics</p><h1>How it works</h1>
 <dl class="items">
 <div><dt>Tuesday, 5:00 PM</dt><dd>A new Focus goes up. The password is in that week’s email: a prime number over 1000.</dd></div>
 <div><dt>By {e(site['confirm_by'])}</dt><dd>Go through each screen, answer the quick checks, and confirm at the end.</dd></div>
-<div><dt>Wednesday, {e(site['meeting_time'])}</dt><dd>Team meeting. Questions about the Focus go to James by email, not the meeting.</dd></div>
+<div><dt>Wednesday</dt><dd>Team meeting. Questions about the Focus go to James by email, not the meeting.</dd></div>
 </dl>
 <h2 class="sub">The meeting</h2>
+<p>How long it takes is up to all of us. Each agenda has a pace built in, and when we stay with it, we finish sooner.</p>
 <dl class="items">
-<div><dt>Warm-up</dt><dd>10 minutes, led by an RA.</dd></div>
-<div><dt>Building Check-In</dt><dd>10 minutes.</dd></div>
-<div><dt>Developmental content</dt><dd>25 minutes.</dd></div>
-<div><dt>Challenge, recognition, questions</dt><dd>5 minutes each.</dd></div>
+<div><dt>Warm-up</dt><dd>Led by an RA.</dd></div>
+<div><dt>Building Check-In</dt><dd>What’s happening on our floors.</dd></div>
+<div><dt>Developmental content</dt><dd>Something we learn together at our tables.</dd></div>
+<div><dt>Challenge, recognition, questions</dt><dd>Quick ones to close.</dd></div>
+<div><dt>Some weeks</dt><dd>A work session to prep for an upcoming event.</dd></div>
 </dl>
 <h2 class="sub">At your table</h2>
 <p>Tables rotate three roles each week: a facilitator who keeps the conversation going, a timekeeper, and a reporter who shares with the room.</p>"""
