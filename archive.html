@@ -1,24 +1,44 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="locked">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Past Weeks | The Huddle</title>
+<title>Past Weeks | The Flint Focus</title>
+<link rel="icon" href="assets/lens.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Figtree:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="assets/style.css">
+<script>window.FOCUS_WEEK="2026-10-21";</script>
+<script src="assets/gate.js"></script>
+<noscript><style>html.locked .shell{visibility:visible}#gate{display:none}</style></noscript>
 
 </head>
 <body>
+<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-h">
+  <form class="gate-card" novalidate>
+    <svg class="gate-lens" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15 15l5.5 5.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+    <h1 id="gate-h">The Flint Focus</h1>
+    <p>Enter this week’s number from James’s email.</p>
+    <label for="gate-in" class="sr">Password</label>
+    <input id="gate-in" inputmode="numeric" autocomplete="off" placeholder="Password">
+    <button type="submit">Open</button>
+    <p class="gate-msg" aria-live="polite"></p>
+  </form>
+</div>
+<div class="shell">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="wrap top-inner">
-    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span>The Huddle<span class="team">Flint Hall RA Team</span></a>
+    <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15 15l5.5 5.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>The Flint Focus<span class="team">Flint Hall RA Team</span></a>
     <nav aria-label="Main"><a href="index.html">This Week</a><a href="archive.html" aria-current="page">Past Weeks</a><a href="how-it-works.html">How It Works</a></nav>
   </div>
 </header>
 <main id="main" class="wrap">
-<p class="eyebrow">Archive</p><h1>Past weeks</h1><ul class="archive"><li><a href="weeks/2026-10-21.html">Week of October 21</a></li></ul>
+<p class="eyebrow">Archive</p><h1>Past weeks</h1><ul class="archive"><li><a href="weeks/2026-10-21.html">October 21 Team Meeting</a></li></ul>
 </main>
 <footer class="wrap foot">Questions? Email James at <a href="mailto:jabialek@syr.edu">jabialek@syr.edu</a>.</footer>
+</div>
 </body>
 </html>

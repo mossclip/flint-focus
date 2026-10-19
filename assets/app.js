@@ -7,7 +7,7 @@
   var back = week.querySelector(".back");
   var next = week.querySelector(".next");
   var bar = week.querySelector(".bar");
-  var key = "huddle-" + week.getAttribute("data-week");
+  var key = "focus-" + week.getAttribute("data-week");
   var state = { step: 0, done: {} };
 
   try {

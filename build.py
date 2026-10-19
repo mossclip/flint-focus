@@ -1,10 +1,11 @@
-"""Build The Huddle from content/*.json.  Run: python3 build.py"""
+"""Build The Flint Focus from content/*.json.  Run: python3 build.py"""
 import json, glob, os, html
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 site = json.load(open(os.path.join(ROOT, "content", "site.json")))
 weeks = [json.load(open(f)) for f in glob.glob(os.path.join(ROOT, "content", "weeks", "*.json"))]
 weeks.sort(key=lambda w: w["date"], reverse=True)
+GATE_WEEK = weeks[0]["date"] if weeks else ""
 e = html.escape
 
 
@@ -14,20 +15,39 @@ def page(title, body, prefix="", current="", script=False):
         return f'<a href="{prefix}{href}"{cur}>{label}</a>'
     js = f'<script src="{prefix}assets/app.js" defer></script>' if script else ""
     return f"""<!doctype html>
-<html lang="en">
+<html lang="en" class="locked">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>{e(title)} | {e(site['name'])}</title>
+<link rel="icon" href="{prefix}assets/lens.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Figtree:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="{prefix}assets/style.css">
+<script>window.FOCUS_WEEK="{GATE_WEEK}";</script>
+<script src="{prefix}assets/gate.js"></script>
+<noscript><style>html.locked .shell{{visibility:visible}}#gate{{display:none}}</style></noscript>
 {js}
 </head>
 <body>
+<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-h">
+  <form class="gate-card" novalidate>
+    <svg class="gate-lens" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15 15l5.5 5.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+    <h1 id="gate-h">{e(site['name'])}</h1>
+    <p>Enter this week’s number from James’s email.</p>
+    <label for="gate-in" class="sr">Password</label>
+    <input id="gate-in" inputmode="numeric" autocomplete="off" placeholder="Password">
+    <button type="submit">Open</button>
+    <p class="gate-msg" aria-live="polite"></p>
+  </form>
+</div>
+<div class="shell">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="wrap top-inner">
-    <a class="brand" href="{prefix}index.html"><span class="mark" aria-hidden="true"></span>{e(site['name'])}<span class="team">{e(site['team'])}</span></a>
+    <a class="brand" href="{prefix}index.html"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15 15l5.5 5.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>{e(site['name'])}<span class="team">{e(site['team'])}</span></a>
     <nav aria-label="Main">{nav('index.html', 'This Week', 'this')}{nav('archive.html', 'Past Weeks', 'archive')}{nav('how-it-works.html', 'How It Works', 'how')}</nav>
   </div>
 </header>
@@ -35,6 +55,7 @@ def page(title, body, prefix="", current="", script=False):
 {body}
 </main>
 <footer class="wrap foot">Questions? Email James at <a href="mailto:jabialek@syr.edu">jabialek@syr.edu</a>.</footer>
+</div>
 </body>
 </html>
 """
@@ -66,7 +87,7 @@ def week_body(w, latest):
     eyebrow = "This week" if latest else "Past week"
     parts = [f'<div class="week" data-week="{e(w["date"])}">',
              f'<p class="eyebrow">{eyebrow}</p><h1>{e(w["label"])}</h1>',
-             f'<p class="meta">Team meeting Wednesday, {e(site["meeting_time"])}</p>',
+             f'<p class="meta">Wednesday, {e(site["meeting_time"])}</p>',
              f'<div class="progress" aria-hidden="true"><div class="bar"></div></div>',
              '<div class="screens">']
     for i, s in enumerate(screens):
@@ -75,14 +96,14 @@ def week_body(w, latest):
         i = len(screens)
         if site.get("form_url"):
             action = (f'<a class="button" href="{e(site["form_url"])}" target="_blank" rel="noopener">'
-                      'I’ve read this week’s Huddle</a>'
+                      'I’ve read this week’s Focus</a>'
                       '<p class="small">Opens a one-question form. Sign in with your SU account.</p>')
         else:
             action = '<p class="small">The confirmation link will appear here.</p>'
         parts.append(f"""<section class="screen final" id="s{i}" aria-labelledby="h{i}">
 <p class="step">Step {i + 1} of {total}</p>
 <h2 id="h{i}" tabindex="-1">You’re all set</h2>
-<p>Last step: let me know you’ve read this week’s Huddle. Please confirm by {e(site['confirm_by'])}.</p>
+<p>Last step: let me know you’ve read this week’s Focus. Please confirm by {e(site['confirm_by'])}.</p>
 {action}
 </section>""")
     parts.append('</div><div class="pager"><button type="button" class="back">Back</button>'
@@ -107,9 +128,9 @@ with open(os.path.join(ROOT, "archive.html"), "w") as f:
 how = f"""<p class="eyebrow">The basics</p><h1>How it works</h1>
 <p class="lead">{e(site['name'])} is where our announcements live, so the team meeting can be about working together.</p>
 <dl class="items">
-<div><dt>Tuesday, 5:00 PM</dt><dd>A new Huddle goes up.</dd></div>
+<div><dt>Tuesday, 5:00 PM</dt><dd>A new Focus goes up. The password is in that week’s email: a prime number over 1000.</dd></div>
 <div><dt>By {e(site['confirm_by'])}</dt><dd>Go through each screen, answer the quick checks, and confirm at the end.</dd></div>
-<div><dt>Wednesday, {e(site['meeting_time'])}</dt><dd>Team meeting. Questions about The Huddle go to James by email, not the meeting.</dd></div>
+<div><dt>Wednesday, {e(site['meeting_time'])}</dt><dd>Team meeting. Questions about the Focus go to James by email, not the meeting.</dd></div>
 </dl>
 <h2 class="sub">The meeting</h2>
 <dl class="items">

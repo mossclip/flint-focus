@@ -1,28 +1,47 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="locked">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>How It Works | The Huddle</title>
+<title>How It Works | The Flint Focus</title>
+<link rel="icon" href="assets/lens.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Figtree:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="assets/style.css">
+<script>window.FOCUS_WEEK="2026-10-21";</script>
+<script src="assets/gate.js"></script>
+<noscript><style>html.locked .shell{visibility:visible}#gate{display:none}</style></noscript>
 
 </head>
 <body>
+<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-h">
+  <form class="gate-card" novalidate>
+    <svg class="gate-lens" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15 15l5.5 5.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+    <h1 id="gate-h">The Flint Focus</h1>
+    <p>Enter this week’s number from James’s email.</p>
+    <label for="gate-in" class="sr">Password</label>
+    <input id="gate-in" inputmode="numeric" autocomplete="off" placeholder="Password">
+    <button type="submit">Open</button>
+    <p class="gate-msg" aria-live="polite"></p>
+  </form>
+</div>
+<div class="shell">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="wrap top-inner">
-    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span>The Huddle<span class="team">Flint Hall RA Team</span></a>
+    <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15 15l5.5 5.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>The Flint Focus<span class="team">Flint Hall RA Team</span></a>
     <nav aria-label="Main"><a href="index.html">This Week</a><a href="archive.html">Past Weeks</a><a href="how-it-works.html" aria-current="page">How It Works</a></nav>
   </div>
 </header>
 <main id="main" class="wrap">
 <p class="eyebrow">The basics</p><h1>How it works</h1>
-<p class="lead">The Huddle is where our announcements live, so the team meeting can be about working together.</p>
+<p class="lead">The Flint Focus is where our announcements live, so the team meeting can be about working together.</p>
 <dl class="items">
-<div><dt>Tuesday, 5:00 PM</dt><dd>A new Huddle goes up.</dd></div>
+<div><dt>Tuesday, 5:00 PM</dt><dd>A new Focus goes up. The password is in that week’s email: a prime number over 1000.</dd></div>
 <div><dt>By 12:00 PM Wednesday</dt><dd>Go through each screen, answer the quick checks, and confirm at the end.</dd></div>
-<div><dt>Wednesday, 8:30 to 9:30 PM</dt><dd>Team meeting. Questions about The Huddle go to James by email, not the meeting.</dd></div>
+<div><dt>Wednesday, 8:30 to 9:30 PM</dt><dd>Team meeting. Questions about the Focus go to James by email, not the meeting.</dd></div>
 </dl>
 <h2 class="sub">The meeting</h2>
 <dl class="items">
@@ -35,5 +54,6 @@
 <p>Tables rotate three roles each week: a facilitator who keeps the conversation going, a timekeeper, and a reporter who shares with the room.</p>
 </main>
 <footer class="wrap foot">Questions? Email James at <a href="mailto:jabialek@syr.edu">jabialek@syr.edu</a>.</footer>
+</div>
 </body>
 </html>

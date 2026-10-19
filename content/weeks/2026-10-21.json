@@ -1,15 +1,15 @@
 {
   "date": "2026-10-21",
-  "label": "Week of October 21",
+  "label": "October 21 Team Meeting",
   "screens": [
     {
-      "title": "Welcome to The Huddle",
+      "title": "Welcome to The Flint Focus",
       "paras": [
-        "Starting this week, all our announcements, updates, and dates live here instead of in the team meeting. A new Huddle goes up every Tuesday at 5:00 PM.",
+        "Starting this week, all our announcements, updates, and dates live here instead of in the team meeting. A new Flint Focus goes up every Tuesday at 5:00 PM.",
         "Each screen has one quick question to check you've got it. At the end, you'll confirm you've read everything. Please finish by 12:00 PM on Wednesday."
       ],
       "check": {
-        "q": "When should you finish The Huddle each week?",
+        "q": "When should you finish The Flint Focus each week?",
         "options": ["By 12:00 PM Wednesday", "During the team meeting", "Whenever you get to it"],
         "answer": 0
       }
