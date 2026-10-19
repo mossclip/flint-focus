@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-21",
+  "label": "Week of October 21",
+  "screens": [
+    {
+      "title": "Welcome to The Huddle",
+      "paras": [
+        "Starting this week, all our announcements, updates, and dates live here instead of in the team meeting. A new Huddle goes up every Tuesday at 5:00 PM.",
+        "Each screen has one quick question to check you've got it. At the end, you'll confirm you've read everything. Please finish by 12:00 PM on Wednesday."
+      ],
+      "check": {
+        "q": "When should you finish The Huddle each week?",
+        "options": ["By 12:00 PM Wednesday", "During the team meeting", "Whenever you get to it"],
+        "answer": 0
+      }
+    },
+    {
+      "title": "Our new meeting format",
+      "paras": [
+        "Meetings now run 8:30 to 9:30 PM, and most of that time is spent working at your tables instead of listening to me.",
+        "One expectation: side conversations pull everyone off track. If it happens, I'll give one reminder. If it keeps happening, I'll ask you to step out, and we'll set up a 1:1 so you can catch up on what you missed."
+      ],
+      "check": {
+        "q": "What happens if side conversations keep going after a reminder?",
+        "options": ["Nothing, as long as it's quiet", "You'll be asked to step out and set up a 1:1", "You'll be moved to a different table"],
+        "answer": 1
+      }
+    },
+    {
+      "title": "For Wednesday",
+      "list": [
+        ["Warm-up", "Show and Tell, facilitated by Jazera. If you're bringing something in person, don't forget it."],
+        ["Developmental content", "We'll read a short Roompact article together at our tables. Nothing to read ahead of time."],
+        ["Building Check-In", "Come ready to talk about what's happening on your floor."]
+      ],
+      "check": {
+        "q": "Who is facilitating the warm-up this week?",
+        "options": ["James", "Jazera", "Whoever volunteers"],
+        "answer": 1
+      }
+    },
+    {
+      "title": "This week's challenge: Expectations",
+      "paras": [
+        "Talk with three residents about what they expected life in Flint to be like. Where have their expectations been met, and where has it been different?",
+        "We'll check in on it at next week's meeting."
+      ],
+      "check": {
+        "q": "How many residents should you talk with this week?",
+        "options": ["One", "Three", "Your whole floor"],
+        "answer": 1
+      }
+    },
+    {
+      "title": "Support your teammates",
+      "list": [
+        ["RENT", "Henry is in the chorus. The show runs through Sunday, October 25."],
+        ["FYP Haunted House", "Rem is helping out. Friday and Saturday, October 23 and 24, at 7:00 PM in Walters Hall."]
+      ],
+      "check": {
+        "q": "Where is the FYP Haunted House?",
+        "options": ["Walters Hall", "Schine Student Center", "Flint Hall"],
+        "answer": 0
+      }
+    }
+  ]
+}
