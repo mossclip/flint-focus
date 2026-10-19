@@ -1,5 +1,6 @@
 """Build The Flint Focus from content/*.json.  Run: python3 build.py"""
 import json, glob, os, html
+from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 site = json.load(open(os.path.join(ROOT, "content", "site.json")))
@@ -85,7 +86,7 @@ def tables_screen(w):
     return {"title": "Your table this week",
             "paras": ["Tables are labeled 1 to 4 in the meeting room. Find your name and sit at your table. "
                       "Please arrive a few minutes before 8:30 PM so you're seated and ready to go."],
-            "list": [[f"Table {i}", ", ".join(t)] for i, t in enumerate(w["tables"], 1)],
+            "list": [[f"Table {i}", ", ".join(n + (" (excused this week, honorary member)" if n in w.get("excused", []) else "") for n in t)] for i, t in enumerate(w["tables"], 1)],
             "check": {"q": "When should you be seated at your table?",
                       "options": ["A few minutes before 8:30 PM", "Right at 8:30 PM", "Whenever you get there"],
                       "answer": 0}}
@@ -104,17 +105,17 @@ def week_body(w, latest):
         parts.append(screen_html(i, total, s, w["date"]))
     if latest:
         i = len(screens)
-        if site.get("form_url"):
-            action = (f'<a class="button" href="{e(site["form_url"])}" target="_blank" rel="noopener">'
-                      'I’ve read this week’s Focus</a>'
-                      '<p class="small">Opens a one-question form. Sign in with your SU account.</p>')
-        else:
-            action = '<p class="small">The confirmation link will appear here.</p>'
+        code = w.get("code", "")
+        mail = ("mailto:jabialek@syr.edu?subject=" +
+                quote(f"Flint Focus {w['label']}: {code}") + "&body=" + quote(f"Code: {code}"))
         parts.append(f"""<section class="screen final" id="s{i}" aria-labelledby="h{i}">
 <p class="step">Step {i + 1} of {total}</p>
-<h2 id="h{i}" tabindex="-1">You’re all set</h2>
-<p>Last step: let me know you’ve read this week’s Focus. Please confirm by {e(site['confirm_by'])}.</p>
-{action}
+<h2 id="h{i}" tabindex="-1">You’re all set. Here’s your code.</h2>
+<p class="code">{e(code)}</p>
+<p>Email this code to James by {e(site['confirm_by'])}. That’s how he marks you as done for the week.</p>
+<p><strong>This is mandatory.</strong> The Flint Focus is part of our team meeting, so completing it counts the same as showing up.</p>
+<a class="button" href="{e(mail)}">Email James the code</a>
+<p class="small">Opens a new email to jabialek@syr.edu with the code filled in. Or just send it yourself.</p>
 </section>""")
     parts.append('</div><div class="pager"><button type="button" class="back">Back</button>'
                  '<button type="button" class="next">Next</button></div></div>')
@@ -139,7 +140,7 @@ how = f"""<p class="eyebrow">The basics</p><h1>How it works</h1>
 <p class="lead">{e(site['name'])} is where our announcements live, so the team meeting can be about working together.</p>
 <dl class="items">
 <div><dt>Tuesday, 5:00 PM</dt><dd>A new Focus goes up. The PIN is in that week’s email.</dd></div>
-<div><dt>By {e(site['confirm_by'])}</dt><dd>Go through each screen, answer the quick checks, and confirm at the end.</dd></div>
+<div><dt>By {e(site['confirm_by'])}</dt><dd>Go through each screen and answer the quick checks. At the end you’ll get a two-word code. Email it to James. This is mandatory.</dd></div>
 <div><dt>Wednesday</dt><dd>Team meeting. Questions about the Focus go to James by email, not the meeting.</dd></div>
 </dl>
 <h2 class="sub">The meeting</h2>

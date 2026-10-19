@@ -7,7 +7,7 @@
       "paras": [
         "Starting this week, announcements, updates, and dates live here instead of in our team meetings. A new Flint Focus goes up every Tuesday at 5:00 PM, and the PIN is in that day's email.",
         "Here's why. I don't want our meetings to be me telling you to do this by that date. I'd rather we spend that time on things we do together: learning from each other, working at our tables, and having some fun.",
-        "Each screen has a quick check. Read and complete it by 8:00 PM Wednesday, and confirm at the end."
+        "Each screen has a quick check. Read and complete it by 8:00 PM Wednesday. At the end you'll get a code to email me."
       ],
       "check": {
         "q": "Why did announcements move here?",
@@ -108,5 +108,9 @@
       "Mark",
       "Michael"
     ]
+  ],
+  "code": "Dusty Bookshelves",
+  "excused": [
+    "Henry"
   ]
 }
