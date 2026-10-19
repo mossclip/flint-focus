@@ -97,7 +97,7 @@ def week_body(w, latest):
     eyebrow = "This week" if latest else "Past week"
     parts = [f'<div class="week" data-week="{e(w["date"])}">',
              f'<p class="eyebrow">{eyebrow}</p><h1>{e(w["label"])}</h1>',
-             f'<p class="meta">Read by {e(site["confirm_by"])}</p>',
+             f'<p class="meta">Read and complete by {e(site["confirm_by"])}</p>',
              f'<div class="progress" aria-hidden="true"><div class="bar"></div></div>',
              '<div class="screens">']
     for i, s in enumerate(screens):
