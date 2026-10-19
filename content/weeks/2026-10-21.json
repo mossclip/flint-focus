@@ -52,40 +52,61 @@
         ],
         [
           "Work session",
-          "We'll end with prep for Home Sweet Flint (Thursday 10/22, 4–7 PM). First up, everyone makes a model book cover on a 3x5 card so residents have good examples. Table tasks to follow."
+          "We'll end with work time at our tables. Details at the meeting."
         ]
       ],
       "check": {
-        "q": "What will everyone make first in the work session?",
+        "q": "How does Wednesday's meeting end?",
         "options": [
-          "A poster for the lobby",
-          "A model book cover on a 3x5 card",
-          "A bulletin board"
-        ],
-        "answer": 1
-      }
-    },
-    {
-      "title": "Support your teammates",
-      "list": [
-        [
-          "RENT",
-          "Henry is in the chorus. The show runs through Sunday, October 25."
-        ],
-        [
-          "FYP Haunted House",
-          "Rem is helping out. Friday and Saturday, October 23 and 24, at 7:00 PM in Walters Hall."
-        ]
-      ],
-      "check": {
-        "q": "Where is the FYP Haunted House?",
-        "options": [
-          "Walters Hall",
-          "Schine Student Center",
-          "Flint Hall"
+          "With a work session at our tables",
+          "With announcements",
+          "With a quiz"
         ],
         "answer": 0
       }
+    },
+    {
+      "title": "'Cuse Connect planning form: due Wednesday",
+      "paras": [
+        "If you haven't submitted your 'Cuse Connect planning form, it's due by the end of Wednesday's team meeting. If it isn't in by then, you'll fill it out at your table during the meeting.",
+        "Submit something, even if it isn't final. You can edit it anytime after. Waiting on a collab partner or still figuring out details? That's fine. Get it in the system now and revise it later.",
+        "If you're collaborating with someone who already submitted one, you're covered."
+      ],
+      "check": {
+        "q": "You're still waiting to hear back from a collab partner. What do you do?",
+        "options": [
+          "Wait until it's all figured out",
+          "Submit something now and edit it later",
+          "Skip it this time"
+        ],
+        "answer": 1
+      }
     }
+  ],
+  "tables": [
+    [
+      "James V.",
+      "Keira",
+      "Max",
+      "Tristan"
+    ],
+    [
+      "Addy",
+      "Giselle",
+      "Henry",
+      "Rem"
+    ],
+    [
+      "Hannah",
+      "Jax",
+      "Jazera",
+      "Stephanie"
+    ],
+    [
+      "Calysta",
+      "Gabby",
+      "Mark",
+      "Michael"
+    ]
   ]
 }

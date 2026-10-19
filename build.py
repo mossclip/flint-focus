@@ -81,8 +81,18 @@ def screen_html(i, total, s, wid):
     return "\n".join(out)
 
 
+def tables_screen(w):
+    return {"title": "Your table this week",
+            "paras": ["Tables are labeled 1 to 4 in the meeting room. Find your name and sit at your table. "
+                      "Please arrive a few minutes before 8:30 PM so you're seated and ready to go."],
+            "list": [[f"Table {i}", ", ".join(t)] for i, t in enumerate(w["tables"], 1)],
+            "check": {"q": "When should you be seated at your table?",
+                      "options": ["A few minutes before 8:30 PM", "Right at 8:30 PM", "Whenever you get there"],
+                      "answer": 0}}
+
+
 def week_body(w, latest):
-    screens = w["screens"]
+    screens = ([tables_screen(w)] if w.get("tables") else []) + w["screens"]
     total = len(screens) + (1 if latest else 0)
     eyebrow = "This week" if latest else "Past week"
     parts = [f'<div class="week" data-week="{e(w["date"])}">',
