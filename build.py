@@ -71,7 +71,14 @@ def screen_html(i, total, s, wid):
     if s.get("list"):
         out.append('<dl class="items">' + "".join(f"<div><dt>{e(a)}</dt><dd>{e(b)}</dd></div>" for a, b in s["list"]) + "</dl>")
     c = s.get("check")
-    if c:
+    if c and c.get("type") == "text":
+        name = f"{wid}-q{i}"
+        out.append(f'<fieldset class="check typed" data-patterns="{e(json.dumps(c["patterns"]))}"><legend>Say it back</legend>'
+                   f'<p class="q">{e(c["q"])}</p>'
+                   f'<label class="sr" for="{name}">Your answer</label>'
+                   f'<input class="typed-in" id="{name}" type="text" autocomplete="off" placeholder="{e(c.get("placeholder", ""))}">'
+                   f'<button type="button" class="typed-go">Check</button><p class="feedback" aria-live="polite"></p></fieldset>')
+    elif c:
         name = f"{wid}-q{i}"
         opts = "".join(
             f'<label class="opt"><input type="radio" name="{name}" value="{k}"><span>{e(o)}</span></label>'

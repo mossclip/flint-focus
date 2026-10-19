@@ -66,6 +66,40 @@
       }
     },
     {
+      "title": "Home Sweet Flint: this Thursday",
+      "paras": [
+        "Thursday, October 22, 3:15 to 6:15 PM in the main lobby. Residents make a book cover for their own story as they reflect on their identity and experiences. It's the same thing you'll make at Wednesday's meeting.",
+        "If you signed up for a shift, here's when you're on:"
+      ],
+      "list": [
+        [
+          "3:15–4:45 PM",
+          "James and Hannah (setup and first stretch)"
+        ],
+        [
+          "4:45–5:15 PM",
+          "Jazera and Mark"
+        ],
+        [
+          "5:15–5:45 PM",
+          "Addy and Rem"
+        ],
+        [
+          "5:45–6:15 PM",
+          "Jax and Stephanie (last shift and cleanup)"
+        ]
+      ],
+      "check": {
+        "q": "When and where is Home Sweet Flint?",
+        "options": [
+          "Thursday 10/22, 3:15–6:15 PM, main lobby",
+          "Friday 10/23, 7:00 PM, Walters Hall",
+          "Wednesday 10/21, at the team meeting"
+        ],
+        "answer": 0
+      }
+    },
+    {
       "title": "'Cuse Connect planning form: due Wednesday",
       "paras": [
         "If you haven't submitted your 'Cuse Connect planning form, it's due by the end of Wednesday's team meeting. If it isn't in by then, you'll fill it out at your table during the meeting.",
@@ -78,6 +112,39 @@
           "Wait until it's all figured out",
           "Submit something now and edit it later",
           "Skip it this time"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "title": "'Cuse Chats: 100% by Friday, October 30 at 5 PM",
+      "paras": [
+        "Every 'Cuse Chat for every resident on your floor is due, 100% complete, by Friday, October 30 at 5:00 PM. No exceptions.",
+        "Some residents you just can't reach. If you've tried three different ways and still can't connect, use the 'Cuse Connect Attempted Connection form. It opens Monday, October 26."
+      ],
+      "check": {
+        "type": "text",
+        "q": "Type the deadline back: when are all your 'Cuse Chats due?",
+        "placeholder": "100% by ...",
+        "patterns": [
+          "100",
+          "(oct(ober)?\\.?\\s*30|10\\s*/\\s*30)",
+          "\\b5\\b|5\\s*(pm|p\\.m)"
+        ]
+      }
+    },
+    {
+      "title": "Grow As You Go: sign up now",
+      "paras": [
+        "Monday, November 9, 4:00 to 6:00 PM in the lobby. We need two RAs for every half-hour slot, so eight of you total.",
+        "Sign up in our Teams General channel. The sheet is called \"Grow As You Go - RA Shift Sign-Up.\" Unless you have class, plan on taking a slot. Events like this need all of us."
+      ],
+      "check": {
+        "q": "How many RAs does each half-hour slot need?",
+        "options": [
+          "One",
+          "Two",
+          "Four"
         ],
         "answer": 1
       }
