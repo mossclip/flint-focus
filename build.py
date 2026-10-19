@@ -36,9 +36,9 @@ def page(title, body, prefix="", current="", script=False):
   <form class="gate-card" novalidate>
     <svg class="gate-lens" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15 15l5.5 5.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
     <h1 id="gate-h">{e(site['name'])}</h1>
-    <p>Enter this week’s number from James’s email.</p>
-    <label for="gate-in" class="sr">Password</label>
-    <input id="gate-in" inputmode="numeric" autocomplete="off" placeholder="Password">
+    <p>Enter this week’s PIN.</p>
+    <label for="gate-in" class="sr">PIN</label>
+    <input id="gate-in" inputmode="numeric" autocomplete="off" placeholder="PIN">
     <button type="submit">Open</button>
     <p class="gate-msg" aria-live="polite"></p>
   </form>
@@ -138,7 +138,7 @@ with open(os.path.join(ROOT, "archive.html"), "w") as f:
 how = f"""<p class="eyebrow">The basics</p><h1>How it works</h1>
 <p class="lead">{e(site['name'])} is where our announcements live, so the team meeting can be about working together.</p>
 <dl class="items">
-<div><dt>Tuesday, 5:00 PM</dt><dd>A new Focus goes up. The password is in that week’s email: a prime number over 1000.</dd></div>
+<div><dt>Tuesday, 5:00 PM</dt><dd>A new Focus goes up. The PIN is in that week’s email.</dd></div>
 <div><dt>By {e(site['confirm_by'])}</dt><dd>Go through each screen, answer the quick checks, and confirm at the end.</dd></div>
 <div><dt>Wednesday</dt><dd>Team meeting. Questions about the Focus go to James by email, not the meeting.</dd></div>
 </dl>
