@@ -137,16 +137,32 @@
       "title": "Grow As You Go: sign up now",
       "paras": [
         "Monday, November 9, 4:00 to 6:00 PM in the lobby. We need two RAs for every half-hour slot, so eight of you total.",
-        "Sign up in our Teams General channel. The sheet is called \"Grow As You Go - RA Shift Sign-Up.\" Unless you have class, plan on taking a slot. Events like this need all of us."
+        "Unless you have class, plan on taking a slot. Events like this need all of us."
       ],
       "check": {
-        "q": "How many RAs does each half-hour slot need?",
+        "legend": "Before you move on",
+        "q": "Did you sign up?",
         "options": [
-          "One",
-          "Two",
-          "Four"
+          "Yes, I signed up",
+          "No, I have class during the whole event",
+          "No, it was already full when I checked",
+          "No, I'll be out of the country"
         ],
-        "answer": 1
+        "answer": [
+          0,
+          1,
+          2
+        ],
+        "feedback": [
+          "Thank you!",
+          "Got it. Thanks for letting me know.",
+          "Got it. Thanks for checking.",
+          "That isn't an acceptable reason. Please open the sheet and sign up."
+        ]
+      },
+      "link": {
+        "href": "https://sumailsyr.sharepoint.com/:x:/r/sites/FlintHallRLTeam-26-27/Shared%20Documents/General/Grow%20As%20You%20Go%20-%20RA%20Shift%20Sign-Up.xlsx?web=1",
+        "text": "Open the sign-up sheet"
       }
     }
   ],

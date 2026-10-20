@@ -68,6 +68,8 @@ def screen_html(i, total, s, wid):
            f'<h2 id="h{i}" tabindex="-1">{e(s["title"])}</h2>']
     for p in s.get("paras", []):
         out.append(f"<p>{e(p)}</p>")
+    if s.get("link"):
+        out.append(f'<p><a class="button" href="{e(s["link"]["href"])}" target="_blank" rel="noopener">{e(s["link"]["text"])}</a></p>')
     if s.get("list"):
         out.append('<dl class="items">' + "".join(f"<div><dt>{e(a)}</dt><dd>{e(b)}</dd></div>" for a, b in s["list"]) + "</dl>")
     c = s.get("check")
@@ -83,7 +85,9 @@ def screen_html(i, total, s, wid):
         opts = "".join(
             f'<label class="opt"><input type="radio" name="{name}" value="{k}"><span>{e(o)}</span></label>'
             for k, o in enumerate(c["options"]))
-        out.append(f'<fieldset class="check" data-answer="{c["answer"]}"><legend>Quick check</legend>'
+        ans = ",".join(map(str, c["answer"])) if isinstance(c["answer"], list) else str(c["answer"])
+        fbs = f' data-feedback="{e(json.dumps(c["feedback"]))}"' if c.get("feedback") else ""
+        out.append(f'<fieldset class="check" data-answer="{ans}"{fbs}><legend>{e(c.get("legend", "Quick check"))}</legend>'
                    f'<p class="q">{e(c["q"])}</p>{opts}<p class="feedback" aria-live="polite"></p></fieldset>')
     out.append("</section>")
     return "\n".join(out)

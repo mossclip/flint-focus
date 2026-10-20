@@ -61,22 +61,26 @@
       box.addEventListener("keydown", function (ev) { if (ev.key === "Enter") { ev.preventDefault(); grade(true); } });
       return;
     }
-    var answer = check.getAttribute("data-answer");
+    var answers = check.getAttribute("data-answer").split(",");
+    var custom = JSON.parse(check.getAttribute("data-feedback") || "null");
     var feedback = check.querySelector(".feedback");
     var inputs = check.querySelectorAll("input");
-    function mark(right) {
+    function mark(right, k) {
       check.classList.toggle("right", right);
       check.classList.toggle("wrong", !right);
-      feedback.textContent = right ? "That’s right." : "Not quite. Take another look above.";
+      feedback.textContent = (custom && k != null && custom[k]) ? custom[k]
+        : (right ? "That’s right." : "Not quite. Take another look above.");
     }
     if (state.done[i]) {
-      inputs[answer].checked = true;
-      mark(true);
+      var k0 = state.pick && state.pick[i] != null ? state.pick[i] : answers[0];
+      inputs[k0].checked = true;
+      mark(true, k0);
     }
     Array.prototype.forEach.call(inputs, function (input) {
       input.addEventListener("change", function () {
-        var right = input.value === answer;
-        mark(right);
+        var right = answers.indexOf(input.value) !== -1;
+        state.pick = state.pick || {}; state.pick[i] = input.value;
+        mark(right, input.value);
         if (right) state.done[i] = true;
         if (i === state.step) next.disabled = !passed(i);
         save();
