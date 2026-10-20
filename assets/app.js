@@ -42,6 +42,23 @@
   screens.forEach(function (s, i) {
     var check = s.querySelector(".check");
     if (!check) return;
+    if (check.classList.contains("picked")) {
+      var sels = check.querySelectorAll("select"), pfb = check.querySelector(".feedback");
+      function pgrade() {
+        var right = Array.prototype.every.call(sels, function (s) { return s.value === s.getAttribute("data-answer"); });
+        check.classList.toggle("right", right); check.classList.toggle("wrong", !right);
+        pfb.textContent = right ? "That’s right." : "Not quite. Check the date and time.";
+        if (right) state.done[i] = true;
+        if (i === state.step) next.disabled = !passed(i);
+        save();
+      }
+      if (state.done[i]) {
+        Array.prototype.forEach.call(sels, function (s) { s.value = s.getAttribute("data-answer"); });
+        check.classList.add("right"); pfb.textContent = "That’s right.";
+      }
+      check.querySelector(".typed-go").addEventListener("click", pgrade);
+      return;
+    }
     if (check.classList.contains("typed")) {
       var pats = JSON.parse(check.getAttribute("data-patterns")).map(function (p) { return new RegExp(p, "i"); });
       var box = check.querySelector(".typed-in"), fb = check.querySelector(".feedback");

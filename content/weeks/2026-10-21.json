@@ -3,11 +3,11 @@
   "label": "October 21 Team Meeting",
   "screens": [
     {
-      "title": "Why The Flint Focus",
+      "title": "What The Flint Focus is, and why it matters",
       "paras": [
-        "Starting this week, announcements, updates, and dates live here instead of in our team meetings. A new Flint Focus goes up every Tuesday at 5:00 PM, and the PIN is in that day's email.",
-        "Here's why. I don't want our meetings to be me telling you to do this by that date. I'd rather we spend that time on things we do together: learning from each other, working at our tables, and having some fun.",
-        "Each screen has a quick check. Read and complete it by 8:00 PM Wednesday. At the end you'll get a code to email me."
+        "The Flint Focus is where our announcements, updates, and dates live now. A new one goes up every Tuesday at 5:00 PM, and the PIN is in that day's email.",
+        "Here's why. I don't want our team meetings to be me telling you to do this by that date. I'd rather we spend that time on things we do together: learning from each other, working at our tables, and having some fun.",
+        "Why it matters: when everyone shows up already knowing what's coming, our meetings can be shorter, more hands-on, and more about you. Read and complete it by 8:00 PM Wednesday. At the end you'll get a code to email me."
       ],
       "check": {
         "q": "Why did announcements move here?",
@@ -45,10 +45,6 @@
         [
           "Building Check-In",
           "Come ready to talk about what's happening on your floor."
-        ],
-        [
-          "Developmental content",
-          "We'll read a short Roompact article together at our tables. Nothing to read ahead of time."
         ],
         [
           "Work session",
@@ -97,12 +93,15 @@
           "Wednesday 10/21, at the team meeting"
         ],
         "answer": 0
-      }
+      },
+      "after": [
+        "If you pass by and you're not on shift, please stop and make a cover instead of walking past. It sets a good example and shows residents you care. Whether you realize it or not, people are watching."
+      ]
     },
     {
-      "title": "'Cuse Connect planning form: due Wednesday",
+      "title": "November 'Cuse Connect planning form: due Wednesday",
       "paras": [
-        "If you haven't submitted your 'Cuse Connect planning form, it's due by the end of Wednesday's team meeting. If it isn't in by then, you'll fill it out at your table during the meeting.",
+        "If you haven't submitted your planning form for your November 'Cuse Connect, it's due by the end of Wednesday's team meeting. If it isn't in by then, you'll fill it out at your table during the meeting.",
         "Submit something, even if it isn't final. You can edit it anytime after. Waiting on a collab partner or still figuring out details? That's fine. Get it in the system now and revise it later.",
         "If you're collaborating with someone who already submitted one, you're covered."
       ],
@@ -123,13 +122,35 @@
         "Some residents you just can't reach. If you've tried three different ways and still can't connect, use the 'Cuse Connect Attempted Connection form. It opens Monday, October 26."
       ],
       "check": {
-        "type": "text",
-        "q": "Type the deadline back: when are all your 'Cuse Chats due?",
-        "placeholder": "100% by ...",
-        "patterns": [
-          "100",
-          "(oct(ober)?\\.?\\s*30|10\\s*/\\s*30)",
-          "\\b5\\b|5\\s*(pm|p\\.m)"
+        "type": "pick",
+        "q": "Pick the deadline: when are all your 'Cuse Chats due, 100%?",
+        "fields": [
+          {
+            "label": "Date",
+            "options": [
+              "Monday, October 26",
+              "Tuesday, October 27",
+              "Wednesday, October 28",
+              "Thursday, October 29",
+              "Friday, October 30",
+              "Saturday, October 31",
+              "Sunday, November 1",
+              "Monday, November 2"
+            ],
+            "answer": "Friday, October 30"
+          },
+          {
+            "label": "Time",
+            "options": [
+              "9:00 AM",
+              "12:00 PM",
+              "3:00 PM",
+              "5:00 PM",
+              "8:00 PM",
+              "11:59 PM"
+            ],
+            "answer": "5:00 PM"
+          }
         ]
       }
     },

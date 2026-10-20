@@ -153,3 +153,9 @@ html.locked #gate { display: flex; position: fixed; inset: 0; z-index: 100; alig
 .typed-go { margin-top: 10px; font: inherit; font-weight: 600; padding: 11px 22px; border-radius: 10px; border: 0; background: var(--navy); color: #fff; cursor: pointer; }
 @media (prefers-color-scheme: dark) { .typed-go { color: #0e1117; } }
 .check.typed.right .typed-in { border-color: #1e7a46; }
+
+.picks { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.pick span { display: block; font-size: 14px; color: var(--muted); margin-bottom: 4px; }
+.pick select { width: 100%; font: inherit; padding: 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); }
+.pick select:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+@media (max-width: 400px) { .picks { grid-template-columns: 1fr; } }

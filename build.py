@@ -72,8 +72,18 @@ def screen_html(i, total, s, wid):
         out.append(f'<p><a class="button" href="{e(s["link"]["href"])}" target="_blank" rel="noopener">{e(s["link"]["text"])}</a></p>')
     if s.get("list"):
         out.append('<dl class="items">' + "".join(f"<div><dt>{e(a)}</dt><dd>{e(b)}</dd></div>" for a, b in s["list"]) + "</dl>")
+    for p in s.get("after", []):
+        out.append(f"<p>{e(p)}</p>")
     c = s.get("check")
-    if c and c.get("type") == "text":
+    if c and c.get("type") == "pick":
+        sels = "".join(
+            f'<label class="pick"><span>{e(f["label"])}</span><select data-answer="{e(f["answer"])}">'
+            '<option value="">Choose</option>' + "".join(f'<option>{e(o)}</option>' for o in f["options"]) + '</select></label>'
+            for f in c["fields"])
+        out.append(f'<fieldset class="check picked"><legend>Say it back</legend><p class="q">{e(c["q"])}</p>'
+                   f'<div class="picks">{sels}</div><button type="button" class="typed-go">Check</button>'
+                   '<p class="feedback" aria-live="polite"></p></fieldset>')
+    elif c and c.get("type") == "text":
         name = f"{wid}-q{i}"
         out.append(f'<fieldset class="check typed" data-patterns="{e(json.dumps(c["patterns"]))}"><legend>Say it back</legend>'
                    f'<p class="q">{e(c["q"])}</p>'
@@ -95,16 +105,18 @@ def screen_html(i, total, s, wid):
 
 def tables_screen(w):
     return {"title": "Your table this week",
-            "paras": ["Tables are labeled 1 to 4 in the meeting room. Find your name and sit at your table. "
-                      "Please arrive a few minutes before 8:30 PM so you're seated and ready to go."],
+            "paras": ["Tables are labeled 1 to 4 in the meeting room. Find your name and sit at your table. Take note of it."],
+            "after": ["Something I live by: I'm 10 minutes early for everything. If you can, I really recommend coming 5 to 10 minutes "
+                      "early. Get settled, get your pencil out, catch your breath, run to the bathroom. Just get parked so you're ready "
+                      "to work and engage when we start. If you have class right before and have to rush over, I get it."],
             "list": [[f"Table {i}", ", ".join(n + (" (excused this week, honorary member)" if n in w.get("excused", []) else "") for n in t)] for i, t in enumerate(w["tables"], 1)],
-            "check": {"q": "When should you be seated at your table?",
-                      "options": ["A few minutes before 8:30 PM", "Right at 8:30 PM", "Whenever you get there"],
+            "check": {"q": "If you can, when should you get to the meeting?",
+                      "options": ["5 to 10 minutes early", "Right on time", "Whenever you get there"],
                       "answer": 0}}
 
 
 def week_body(w, latest):
-    screens = ([tables_screen(w)] if w.get("tables") else []) + w["screens"]
+    screens = w["screens"][:1] + ([tables_screen(w)] if w.get("tables") else []) + w["screens"][1:]
     total = len(screens) + (1 if latest else 0)
     eyebrow = "This week" if latest else "Past week"
     parts = [f'<div class="week" data-week="{e(w["date"])}">',
