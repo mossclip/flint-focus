@@ -176,7 +176,7 @@ how = f"""<p class="eyebrow">The basics</p><h1>How it works</h1>
 <div><dt>Some weeks</dt><dd>A work session to prep for an upcoming event.</dd></div>
 </dl>
 <h2 class="sub">At your table</h2>
-<p>Tables rotate three roles each week: a facilitator who keeps the conversation going, a timekeeper, and a reporter who shares with the room.</p>"""
+<p>Tables change every week. Your table is on the second screen of each week’s Flint Focus.</p>"""
 with open(os.path.join(ROOT, "how-it-works.html"), "w") as f:
     f.write(page("How It Works", how, current="how"))
 print("built", len(weeks), "week(s)")
