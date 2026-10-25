@@ -14,7 +14,8 @@
         "options": [
           "James",
           "RA Tristan",
-          "Whoever gets there first"
+          "Whoever gets there first",
+          "Max and Jax"
         ],
         "answer": 1
       }
@@ -48,7 +49,8 @@
         "options": [
           "Stephanie",
           "James",
-          "Max and Jax"
+          "Max and Jax",
+          "Tristan"
         ],
         "answer": 0
       }
@@ -64,7 +66,8 @@
         "options": [
           "Join in, since RAs are running it",
           "Stay with the room and save it for after",
-          "Leave early"
+          "Leave early",
+          "Speak up over Stephanie so everyone can hear"
         ],
         "answer": 1
       }
@@ -81,7 +84,8 @@
         "options": [
           "The listening session",
           "Your 1:1 with RD James",
-          "The group chat"
+          "The group chat",
+          "The Flint Focus"
         ],
         "answer": 1
       }
@@ -136,7 +140,8 @@
         "options": [
           "Two emails and a group chat message on the same day",
           "A DM, an email, and a door knock, each at a different time",
-          "One email, sent three times"
+          "One email, sent three times",
+          "A text and a call, five minutes apart"
         ],
         "answer": 1
       }
@@ -178,7 +183,8 @@
         "options": [
           "#1",
           "#2",
-          "#10"
+          "#10",
+          "#5"
         ],
         "answer": 1
       }
@@ -196,7 +202,8 @@
         "options": [
           "Only when residents come",
           "Once a week, even if no one comes",
-          "Once a semester"
+          "Once a semester",
+          "Only at the end of the semester, all at once"
         ],
         "answer": 1
       }
@@ -238,7 +245,8 @@
         "options": [
           "Hand them a treat and wave goodbye",
           "Have them scan the QR code to sign in",
-          "Ask them to come back later"
+          "Ask them to come back later",
+          "Fill out the worksheet for them"
         ],
         "answer": 1
       }
@@ -255,7 +263,8 @@
         "options": [
           "Yes, if I let RD James know ahead of time",
           "No. Every RA needs to be there",
-          "Only if I'm on duty that week"
+          "Only if I'm on duty that week",
+          "Yes, if I find someone to cover my floor"
         ],
         "answer": 1
       },
@@ -281,8 +290,8 @@
         "The full policy is linked here:"
       ],
       "link": {
-        "href": "https://experience.syracuse.edu/residential-living/about/policies/prohibited-item-policy/",
-        "text": "Review the Prohibited Item Policy"
+        "href": "https://mossclip.github.io/flint-focus/pages/prohibited-items.html",
+        "text": "Read the Prohibited Item Policy"
       },
       "link_last": true
     },
@@ -294,15 +303,16 @@
         "If you have questions about what is or isn't acceptable in your own room or anywhere else, please contact RD James and he'll talk it through with you."
       ],
       "link": {
-        "href": "https://experience.syracuse.edu/residential-living/about/policies/",
-        "text": "Student Living Policies"
+        "href": "https://mossclip.github.io/flint-focus/pages/prohibited-items.html",
+        "text": "Prohibited Item Policy"
       },
       "check": {
         "q": "When are RA rooms checked?",
         "options": [
           "November 11, starting at 7:00 PM, by RD James and RD Adrianna",
           "November 11 at 8:30 PM, by other RAs",
-          "Only if you're home"
+          "Only if you're home",
+          "Never; RA rooms are exempt"
         ],
         "answer": 0
       }

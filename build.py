@@ -132,10 +132,10 @@ def tables_screen(w):
             "paras": ["Tables are labeled 1 to 4 in the meeting room. Find your name and sit at your table. Take note of it."],
             "after": ["If you can, try to come 5 to 10 minutes early. Get settled, get your pencil out, catch your breath, run to the "
                       "bathroom. Just get parked so you're ready to work and engage when we start. If you have class right before and "
-                      "have to rush over, I totally understand. Please just be safe."],
+                      "have to rush over, RD James totally understands. Please just be safe."],
             "list": [[f"Table {i}", ", ".join(n + (" (excused this week, honorary member)" if n in w.get("excused", []) else "") for n in t)] for i, t in enumerate(w["tables"], 1)],
             "check": {"q": "If you can, when should you get to the meeting?",
-                      "options": ["5 to 10 minutes early", "Right on time", "Whenever you get there"],
+                      "options": ["5 to 10 minutes early", "Right on time", "Whenever you get there", "Halfway through"],
                       "answer": 0}}
 
 
@@ -203,4 +203,12 @@ how = f"""<p class="eyebrow">The basics</p><h1>How it works</h1>
 <p>Tables change every week. Your table is on the second screen of each week’s Flint Focus.</p>"""
 with open(os.path.join(ROOT, "how-it-works.html"), "w") as f:
     f.write(page("How It Works", how, current="how"))
+os.makedirs(os.path.join(ROOT, "pages"), exist_ok=True)
+for f in glob.glob(os.path.join(ROOT, "content", "pages", "*.json")):
+    pg = json.load(open(f))
+    body = (f'<p class="eyebrow">Reference</p><h1>{e(pg["title"])}</h1><p class="lead">{e(pg["intro"])}</p>'
+            + "".join(f"<p>{fmt(x)}</p>" for x in pg["paras"])
+            + f'<p><a href="{e(pg["source"])}" target="_blank" rel="noopener">Official version on the Residential Living website</a></p>')
+    with open(os.path.join(ROOT, "pages", pg["slug"] + ".html"), "w") as out:
+        out.write(page(pg["title"], body, prefix="../"))
 print("built", len(weeks), "week(s)")

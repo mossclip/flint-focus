@@ -41,7 +41,7 @@
 
   // A wrong answer opens a pop-up and locks the question for a few seconds,
   // then reshuffles the options, so guessing your way through doesn't work.
-  var WAIT = 15;
+  var WAIT = 5;
   var modal = document.createElement("div");
   modal.className = "lock";
   modal.setAttribute("role", "alertdialog");
