@@ -10,6 +10,23 @@ GATE_WEEK = weeks[0]["date"] if weeks else ""
 e = html.escape
 
 
+def fmt(t):
+    """Escape, then turn **text** into <strong>text</strong>."""
+    import re
+    return re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", e(t))
+
+
+def bars_html(b):
+    top = max(v for _, v, *_ in b["items"]) or 1
+    rows = "".join(
+        f'<div class="hbar{" hi" if rest and rest[0] else ""}"><span class="bar-label">{e(lbl)}</span>'
+        f'<span class="bar-track"><span class="bar-fill" style="width:{v / top * 100:.1f}%"></span></span>'
+        f'<span class="bar-val">{v}</span></div>'
+        for lbl, v, *rest in b["items"])
+    cap = f'<figcaption>{e(b["caption"])}</figcaption>' if b.get("caption") else ""
+    return f'<figure class="bars">{cap}{rows}</figure>'
+
+
 def page(title, body, prefix="", current="", script=False):
     def nav(href, label, key):
         cur = ' aria-current="page"' if key == current else ""
@@ -67,13 +84,15 @@ def screen_html(i, total, s, wid):
            f'<p class="step">Step {i + 1} of {total}</p>',
            f'<h2 id="h{i}" tabindex="-1">{e(s["title"])}</h2>']
     for p in s.get("paras", []):
-        out.append(f"<p>{e(p)}</p>")
+        out.append(f"<p>{fmt(p)}</p>")
+    if s.get("bars"):
+        out.append(bars_html(s["bars"]))
     if s.get("link"):
         out.append(f'<p><a class="button" href="{e(s["link"]["href"])}" target="_blank" rel="noopener">{e(s["link"]["text"])}</a></p>')
     if s.get("list"):
         out.append('<dl class="items">' + "".join(f"<div><dt>{e(a)}</dt><dd>{e(b)}</dd></div>" for a, b in s["list"]) + "</dl>")
     for p in s.get("after", []):
-        out.append(f"<p>{e(p)}</p>")
+        out.append(f"<p>{fmt(p)}</p>")
     c = s.get("check")
     if c and c.get("type") == "pick":
         sels = "".join(

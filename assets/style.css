@@ -159,3 +159,12 @@ html.locked #gate { display: flex; position: fixed; inset: 0; z-index: 100; alig
 .pick select { width: 100%; font: inherit; padding: 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); }
 .pick select:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 @media (max-width: 400px) { .picks { grid-template-columns: 1fr; } }
+
+.bars { margin: 20px 0; padding: 0; }
+.bars figcaption { font-size: .9rem; color: var(--muted); margin-bottom: 10px; }
+.hbar { display: grid; grid-template-columns: 7.5rem 1fr 2.5rem; align-items: center; gap: 10px; margin: 8px 0; font-size: .95rem; }
+.bar-track { display: block; width: 100%; background: var(--soft); border-radius: 4px; height: 18px; overflow: hidden; }
+.bar-fill { display: block; height: 100%; background: var(--muted); border-radius: 4px; }
+.hbar.hi .bar-fill { background: var(--orange); }
+.hbar.hi .bar-label, .hbar.hi .bar-val { font-weight: 600; }
+.bar-val { text-align: right; font-variant-numeric: tabular-nums; }

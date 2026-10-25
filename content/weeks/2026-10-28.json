@@ -1,0 +1,275 @@
+{
+  "date": "2026-10-28",
+  "label": "October 28 Team Meeting",
+  "screens": [
+    {
+      "title": "This week, RAs run the meeting",
+      "paras": [
+        "RD James won't be at Wednesday's meeting, because RD James needs to be helping in another building at that time. RAs will be facilitating the whole meeting instead.",
+        "Tristan will lead. He'll open the meeting, take attendance, keep things moving, and note any issues that come up. Please give him, and everyone facilitating, the same respect you'd want from the room if you were the one up front.",
+        "Read and complete this Focus by 8:00 PM Wednesday. At the end you'll get a code to email to RD James."
+      ],
+      "check": {
+        "q": "Who leads Wednesday's meeting?",
+        "options": [
+          "James",
+          "RA Tristan",
+          "Whoever gets there first"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "title": "Wednesday, step by step",
+      "list": [
+        [
+          "Welcome",
+          "Tristan opens the meeting and takes attendance."
+        ],
+        [
+          "Warm-up",
+          "An RA will lead us in a warm-up."
+        ],
+        [
+          "Discussion",
+          "Stephanie leads a conversation about belonging and community: how each of us thinks about building community and engagement on our floors. There's a short article we'll read and talk through together."
+        ],
+        [
+          "Reminders",
+          "Tristan closes with reminders about 'Cuse Chats and Health and Safety inspections, then dismisses us."
+        ],
+        [
+          "Listening session (optional)",
+          "Max and Jax will stay in the room afterward for anyone who wants to talk with them."
+        ]
+      ],
+      "check": {
+        "q": "Who leads the discussion on belonging and community?",
+        "options": [
+          "Stephanie",
+          "James",
+          "Max and Jax"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "title": "Respect the facilitators",
+      "paras": [
+        "Facilitating a room of your peers is harder than it looks. Please show Tristan, Stephanie, and our warm-up leader the respect you'd want for yourself: don't interrupt, don't talk over them, and save side conversations for later.",
+        "Staying on track is how we all get out sooner. How long the meeting takes is up to all of us."
+      ],
+      "check": {
+        "q": "Someone at your table starts a side conversation while Stephanie is talking. What's the move?",
+        "options": [
+          "Join in, since RAs are running it",
+          "Stay with the room and save it for after",
+          "Leave early"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "title": "The listening session with Max and Jax",
+      "paras": [
+        "After the meeting, Max and Jax will stay in the room for anyone who would like to talk through questions or ideas about the RA role with fellow RAs. It's optional.",
+        "It's a good place for general feedback about the role or the department. Anything personal or private belongs in your 1:1 with RD James. RD James has asked for your feedback in every 1:1 so far and will keep asking, so you will always have that chance.",
+        "Whatever you bring, please keep it respectful and professional."
+      ],
+      "check": {
+        "q": "You have a private, personal concern you want to raise. Where does it go?",
+        "options": [
+          "The listening session",
+          "Your 1:1 with RD James",
+          "The group chat"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "title": "'Cuse Chats: 100% by Friday, October 30 at 5 PM",
+      "paras": [
+        "Some emails this week listed a different date. The official deadline is the one here: Friday, October 30 at 5:00 PM.",
+        "Every resident on your floor needs a 'Cuse Chat logged by then, or an Attempted Contact Form (next screen).",
+        "**Please log each chat as soon as you can after you have it.** Don't wait until Friday afternoon. RD James will be emailing every resident who hasn't been contacted, every day this week. If a chat happened but isn't logged, that resident keeps getting emails they don't need, so please stay on top of it."
+      ],
+      "check": {
+        "type": "pick",
+        "q": "Pick the official deadline: when are all your 'Cuse Chats due, 100%?",
+        "fields": [
+          {
+            "label": "Date",
+            "options": [
+              "Wednesday, October 28",
+              "Thursday, October 29",
+              "Friday, October 30",
+              "Saturday, October 31",
+              "Sunday, November 1",
+              "Monday, November 2"
+            ],
+            "answer": "Friday, October 30"
+          },
+          {
+            "label": "Time",
+            "options": [
+              "9:00 AM",
+              "12:00 PM",
+              "3:00 PM",
+              "5:00 PM",
+              "8:00 PM",
+              "11:59 PM"
+            ],
+            "answer": "5:00 PM"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Can't reach someone? The Attempted Contact Form",
+      "paras": [
+        "The Attempted Contact Form opens Monday, October 26. It's only for residents you truly couldn't connect with.",
+        "To use it, you need to document three attempts, using three different methods, at three different times. For example: a direct message, then an email, then a knock on their door, each on a different day. Two emails and a group chat message don't count.",
+        "Before you get there, try the simplest option: email the resident four or five 'Cuse Chat questions and ask them to write back. Once they reply and you log it, that chat is done."
+      ],
+      "check": {
+        "q": "Which of these counts for the Attempted Contact Form?",
+        "options": [
+          "Two emails and a group chat message on the same day",
+          "A DM, an email, and a door knock, each at a different time",
+          "One email, sent three times"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "title": "Office hours: more than 1,000 residents reached",
+      "paras": [
+        "Kim shared that RAs across campus have connected with more than 1,000 residents through office hours this semester. The office hours forms show 1,044 different residents so far. Thank you to everyone who has made a point of being engaging and approachable during these hours.",
+        "RD James would like to recognize Flint 4C RAs Max and Jax for leading the #2 floor on campus. Together they've logged 78 interactions with 38 different residents. Wonderful work, and please keep it up."
+      ],
+      "bars": {
+        "caption": "Resident visits logged during office hours: the top five floors on campus",
+        "items": [
+          [
+            "Sadler 3",
+            121
+          ],
+          [
+            "Flint 4C",
+            78,
+            true
+          ],
+          [
+            "Sadler 4",
+            72
+          ],
+          [
+            "DellPlain 8",
+            51
+          ],
+          [
+            "Sadler 5",
+            47
+          ]
+        ]
+      },
+      "check": {
+        "q": "Where does Flint 4C rank on campus for office hours engagement?",
+        "options": [
+          "#1",
+          "#2",
+          "#10"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "title": "An office hours update from Kim",
+      "paras": [
+        "Kim has confirmed that office hours will continue next semester. RD James knows many of you have had a hard time getting residents to come, and we can talk together about what might work better.",
+        "In the meantime, please submit the Office Hours Reflection Form in Roompact every week, even when no one comes. Some of us have submitted only a few this semester, so going forward one per week is required. If a week's form is missing, you'll get an email the following Monday. It helps to submit it as soon as you can after the office hour itself.",
+        "Nobody is expecting you to see a huge number of residents every time. Still, the kind of engagement Max and Jax have shown reflects very well on them, and a semester with no residents reached doesn't. The RA role is about knowing your residents: talking with them, knocking on a door now and then, and asking how their day is going. That makes a real difference on a floor, and it's the kind of work that shows up in evaluations and in the references RD James is asked to write.",
+        "RD James would also like to hear how this expectation could be explained more clearly. Bring your questions and concerns to your next 1:1."
+      ],
+      "check": {
+        "q": "How often should you submit the Office Hours Reflection Form?",
+        "options": [
+          "Only when residents come",
+          "Once a week, even if no one comes",
+          "Once a semester"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "title": "Health and Safety inspections: Wednesday, November 11",
+      "paras": [
+        "Flint's Health and Safety inspections are Wednesday, November 11. **Every RA needs to be there, and nobody can take that night off.** We need two RAs inspecting each floor.",
+        "We'll gather at 8:30 PM in our usual team meeting classroom to answer quick questions and get everyone on the same page. Then we'll head out to the floors. You won't inspect your own floor; assignments will be mixed so nobody has to write up their own residents.",
+        "Every room gets checked, whether the residents are home or not. You'll document what you find, with photos, and write it up. RD James will send full instructions in next week's Focus. For now, please get familiar with the prohibited items list and the fire safety expectations, since those are what we'll be looking for."
+      ],
+      "link": {
+        "href": "https://experience.syracuse.edu/residential-living/about/policies/prohibited-item-policy/",
+        "text": "Review the Prohibited Item Policy"
+      },
+      "check": {
+        "q": "On November 11, where and when do we gather?",
+        "options": [
+          "8:30 PM in our team meeting classroom",
+          "On our own floors at 8:00 PM",
+          "We don't gather; just start inspecting"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "title": "Your room gets checked too",
+      "paras": [
+        "RA rooms need to be inspected as well, but not by RAs. RD James and Adrianna Smith will check RA spaces in both Day Hall and Flint Hall together.",
+        "This happens the same day as our inspections, starting at 7:00 PM, and it will take place whether you're there or not. Your room will face no greater scrutiny than any other.",
+        "If you have questions about what is or isn't acceptable in your own room or anywhere else, please contact RD James and you can talk it through."
+      ],
+      "link": {
+        "href": "https://experience.syracuse.edu/residential-living/about/policies/",
+        "text": "Student Living Policies"
+      },
+      "check": {
+        "q": "When are RA rooms checked?",
+        "options": [
+          "November 11, starting at 7:00 PM, by RD James and Adrianna",
+          "November 11 at 8:30 PM, by other RAs",
+          "Only if you're home"
+        ],
+        "answer": 0
+      }
+    }
+  ],
+  "code": "Amber Acorns",
+  "excused": [],
+  "tables": [
+    [
+      "Gabby",
+      "Keira",
+      "Max",
+      "Rem"
+    ],
+    [
+      "Giselle",
+      "Jax",
+      "Mark",
+      "Stephanie"
+    ],
+    [
+      "Addy",
+      "Hannah",
+      "Jazera",
+      "Michael"
+    ],
+    [
+      "Calysta",
+      "Henry",
+      "James V.",
+      "Tristan"
+    ]
+  ]
+}
