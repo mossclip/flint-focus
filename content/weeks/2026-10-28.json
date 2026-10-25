@@ -370,7 +370,7 @@
         ]
       ],
       "after": [
-        "If your 1:1 or another meeting was affected, you can always use the booking link at the bottom of RD James's email signature to pick a new time. He cares about you and loves chatting with you, so please don't hesitate."
+        "If your 1:1 or another meeting was canceled because of these days, rebooking is optional. You don't have to. RD James would love it if you did, though. He enjoys chatting with you, wants to be supportive, and likes hearing how you're doing. If you'd like to find a new time, use the booking link at the bottom of his email signature, or the button below."
       ],
       "link": {
         "href": "https://bookings.cloud.microsoft/book/MeetingwithJamesBialek30minutes@bookings.syr.edu/",
@@ -378,12 +378,12 @@
       },
       "link_last": true,
       "check": {
-        "q": "Your 1:1 falls on one of these days. What do you do?",
+        "q": "Your 1:1 was canceled because RD James is out. Do you have to rebook?",
         "options": [
-          "Skip it this month",
-          "Use the booking link to pick a new time",
-          "Wait for RD James to reach out",
-          "Ask another RD to meet instead"
+          "Yes, within 24 hours",
+          "No, it's optional, but he'd love it if you did",
+          "No, and you shouldn't",
+          "Only if he emails you first"
         ],
         "answer": 1
       }
