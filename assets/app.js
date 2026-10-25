@@ -39,6 +39,39 @@
     save();
   }
 
+  // A wrong answer opens a pop-up and locks the question for a few seconds,
+  // then reshuffles the options, so guessing your way through doesn't work.
+  var WAIT = 15;
+  var modal = document.createElement("div");
+  modal.className = "lock";
+  modal.setAttribute("role", "alertdialog");
+  modal.setAttribute("aria-modal", "true");
+  modal.innerHTML = '<div class="lock-card"><p class="lock-h">Not quite.</p>' +
+    '<p>Take another look at this screen. You can try again in <strong class="lock-n"></strong> seconds.</p></div>';
+  modal.hidden = true;
+  document.body.appendChild(modal);
+  function lockout(check, after) {
+    var n = WAIT, count = modal.querySelector(".lock-n");
+    check.classList.add("locked");
+    Array.prototype.forEach.call(check.querySelectorAll("input, select, button"), function (el) { el.disabled = true; });
+    count.textContent = n; modal.hidden = false;
+    var t = setInterval(function () {
+      n -= 1; count.textContent = n;
+      if (n > 0) return;
+      clearInterval(t); modal.hidden = true;
+      check.classList.remove("locked", "wrong");
+      Array.prototype.forEach.call(check.querySelectorAll("input, select, button"), function (el) { el.disabled = false; });
+      if (after) after();
+    }, 1000);
+  }
+  function shuffle(check) {
+    var opts = Array.prototype.slice.call(check.querySelectorAll(".opt"));
+    var fb = check.querySelector(".feedback");
+    for (var a = opts.length - 1; a > 0; a--) { var b = Math.floor(Math.random() * (a + 1)); var x = opts[a]; opts[a] = opts[b]; opts[b] = x; }
+    opts.forEach(function (o) { o.querySelector("input").checked = false; check.insertBefore(o, fb); });
+    fb.textContent = "";
+  }
+
   screens.forEach(function (s, i) {
     var check = s.querySelector(".check");
     if (!check) return;
@@ -51,6 +84,7 @@
         if (right) state.done[i] = true;
         if (i === state.step) next.disabled = !passed(i);
         save();
+        if (!right) lockout(check, function () { pfb.textContent = ""; });
       }
       if (state.done[i]) {
         Array.prototype.forEach.call(sels, function (s) { s.value = s.getAttribute("data-answer"); });
@@ -101,6 +135,7 @@
         if (right) state.done[i] = true;
         if (i === state.step) next.disabled = !passed(i);
         save();
+        if (!right && !(custom && custom[input.value])) lockout(check, function () { shuffle(check); });
       });
     });
   });

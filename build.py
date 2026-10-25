@@ -7,6 +7,8 @@ site = json.load(open(os.path.join(ROOT, "content", "site.json")))
 weeks = [json.load(open(f)) for f in glob.glob(os.path.join(ROOT, "content", "weeks", "*.json"))]
 weeks.sort(key=lambda w: w["date"], reverse=True)
 GATE_WEEK = weeks[0]["date"] if weeks else ""
+import time
+VER = str(int(time.time()))
 e = html.escape
 
 
@@ -31,7 +33,7 @@ def page(title, body, prefix="", current="", script=False):
     def nav(href, label, key):
         cur = ' aria-current="page"' if key == current else ""
         return f'<a href="{prefix}{href}"{cur}>{label}</a>'
-    js = f'<script src="{prefix}assets/app.js" defer></script>' if script else ""
+    js = f'<script src="{prefix}assets/app.js?v={VER}" defer></script>' if script else ""
     return f"""<!doctype html>
 <html lang="en" class="locked">
 <head>
@@ -43,7 +45,7 @@ def page(title, body, prefix="", current="", script=False):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Figtree:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="{prefix}assets/style.css">
+<link rel="stylesheet" href="{prefix}assets/style.css?v={VER}">
 <script>window.FOCUS_WEEK="{GATE_WEEK}";</script>
 <script src="{prefix}assets/gate.js"></script>
 <noscript><style>html.locked .shell{{visibility:visible}}#gate{{display:none}}</style></noscript>
@@ -87,12 +89,15 @@ def screen_html(i, total, s, wid):
         out.append(f"<p>{fmt(p)}</p>")
     if s.get("bars"):
         out.append(bars_html(s["bars"]))
-    if s.get("link"):
-        out.append(f'<p><a class="button" href="{e(s["link"]["href"])}" target="_blank" rel="noopener">{e(s["link"]["text"])}</a></p>')
+    link = f'<p><a class="button" href="{e(s["link"]["href"])}" target="_blank" rel="noopener">{e(s["link"]["text"])}</a></p>' if s.get("link") else ""
+    if link and not s.get("link_last"):
+        out.append(link)
     if s.get("list"):
         out.append('<dl class="items">' + "".join(f"<div><dt>{e(a)}</dt><dd>{e(b)}</dd></div>" for a, b in s["list"]) + "</dl>")
     for p in s.get("after", []):
         out.append(f"<p>{fmt(p)}</p>")
+    if link and s.get("link_last"):
+        out.append(link)
     c = s.get("check")
     if c and c.get("type") == "pick":
         sels = "".join(

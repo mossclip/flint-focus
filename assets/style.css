@@ -168,3 +168,9 @@ html.locked #gate { display: flex; position: fixed; inset: 0; z-index: 100; alig
 .hbar.hi .bar-fill { background: var(--orange); }
 .hbar.hi .bar-label, .hbar.hi .bar-val { font-weight: 600; }
 .bar-val { text-align: right; font-variant-numeric: tabular-nums; }
+
+.lock { position: fixed; inset: 0; background: rgba(0, 14, 84, .55); display: flex; align-items: center; justify-content: center; padding: 20px; z-index: 50; }
+.lock[hidden] { display: none; }
+.lock-card { background: var(--bg); color: var(--ink); border-radius: 16px; padding: 24px; max-width: 360px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+.lock-h { font: 700 22px "Archivo", sans-serif; color: var(--orange); margin: 0 0 8px; }
+.check.locked { opacity: .55; }
