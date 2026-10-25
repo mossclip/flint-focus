@@ -316,6 +316,48 @@
         ],
         "answer": 0
       }
+    },
+    {
+      "title": "RD James is out: Oct 30 and Nov 3–5",
+      "paras": [
+        "Please note that RD James will be out of the office on these days:"
+      ],
+      "list": [
+        [
+          "Friday, October 30",
+          "Mandatory comp day"
+        ],
+        [
+          "Tuesday, November 3",
+          "Out of office"
+        ],
+        [
+          "Wednesday, November 4",
+          "Out of office"
+        ],
+        [
+          "Thursday, November 5",
+          "Out of office"
+        ]
+      ],
+      "after": [
+        "If your 1:1 or another meeting was affected, you can always use the booking link at the bottom of RD James's email signature to pick a new time. He cares about you and loves chatting with you, so please don't hesitate."
+      ],
+      "link": {
+        "href": "https://bookings.cloud.microsoft/book/MeetingwithJamesBialek30minutes@bookings.syr.edu/",
+        "text": "Book a time with RD James"
+      },
+      "link_last": true,
+      "check": {
+        "q": "Your 1:1 falls on one of these days. What do you do?",
+        "options": [
+          "Skip it this month",
+          "Use the booking link to pick a new time",
+          "Wait for RD James to reach out",
+          "Ask another RD to meet instead"
+        ],
+        "answer": 1
+      }
     }
   ],
   "code": "Amber Acorns",
