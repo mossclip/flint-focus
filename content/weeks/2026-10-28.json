@@ -202,6 +202,48 @@
       }
     },
     {
+      "title": "Grow As You Go: Monday, November 9",
+      "paras": [
+        "Thank you, thank you, thank you so much to everyone who signed up to help with this program. RD James really appreciates it.",
+        "Grow As You Go: Plant Your Next Step is in the Flint lobby, next to the RSO desk. Here's who is working when:"
+      ],
+      "list": [
+        [
+          "3:30–4:00 PM",
+          "RD James and Max (setup)"
+        ],
+        [
+          "4:00–4:30 PM",
+          "Hannah and Mark"
+        ],
+        [
+          "4:30–5:00 PM",
+          "Keira and Giselle"
+        ],
+        [
+          "5:00–5:30 PM",
+          "Addy and Keira"
+        ],
+        [
+          "5:30–6:15 PM",
+          "James V. and Jazera (last shift, cleanup, and a few photos)"
+        ]
+      ],
+      "after": [
+        "On your shift: invite residents over and have them scan the QR code to sign in. Then give them a \"My Next Step\" worksheet and a pen and work through the four boxes together. That's what matters to them now, one strength, something they want to learn or try this semester, a campus resource that could help, and one action they'll take in the next two weeks. It takes about five minutes per resident.",
+        "For the resource box, point them to one item on the Academic Support Resources sheet: CLASS tutoring or coaching, the Writing Center, or the Math Clinics and Calculus Help Center. Then ask, \"When will you do it, and who will keep you accountable?\" Each resident takes home their worksheet, the resource sheet, and a treat. Please take a few photos (with permission) and share them with RD James."
+      ],
+      "check": {
+        "q": "A resident walks up to the table. What's the first step?",
+        "options": [
+          "Hand them a treat and wave goodbye",
+          "Have them scan the QR code to sign in",
+          "Ask them to come back later"
+        ],
+        "answer": 1
+      }
+    },
+    {
       "title": "Health and Safety inspections: Wednesday, November 11",
       "paras": [
         "Flint's Health and Safety inspections are Wednesday, November 11. **Every RA needs to be there, and nobody can take that night off.** We need two RAs inspecting each floor.",
