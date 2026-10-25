@@ -209,6 +209,41 @@
       }
     },
     {
+      "title": "Shout-out: RA Stephanie",
+      "paras": [
+        "RA Stephanie is great. She always makes people laugh and lights up the room.",
+        "Last week, while Stu was on vacation and the desk was short-staffed, the front desk was buried in hundreds of packages. Stephanie brought RD James into the desk, showed him how to log in, issue packages, and use the system, and then spent a good hour with him catching up and tracking down lost packages.",
+        "Thank you so much, Stephanie, for going the extra mile!"
+      ],
+      "check": {
+        "q": "What did RA Stephanie help with last week?",
+        "options": [
+          "Catching up on hundreds of packages at the front desk",
+          "Planning the Halloween party",
+          "Fixing the laundry room",
+          "Running the duty phone"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "title": "Shout-out: RA Hannah",
+      "paras": [
+        "At last week's building-wide initiative, the Home Sweet Flint book cover project, RA Hannah took the first shift. Her positive enthusiasm was so engaging that she got 43 people to stop and make a book cover.",
+        "Thank you for being such an engaging person, RA Hannah!"
+      ],
+      "check": {
+        "q": "How many people did RA Hannah get to make a book cover during her shift?",
+        "options": [
+          "4",
+          "43",
+          "143",
+          "None"
+        ],
+        "answer": 1
+      }
+    },
+    {
       "title": "Grow As You Go: Monday, November 9",
       "paras": [
         "Thank you, thank you, thank you so much to everyone who signed up to help with this program. RD James really appreciates it.",
