@@ -6,16 +6,16 @@
       "title": "This week, RAs run the meeting",
       "paras": [
         "RD James won't be at Wednesday's meeting, because he needs to be helping in another building at that time. RAs will be facilitating the whole meeting instead.",
-        "Tristan will lead. He'll open the meeting, take attendance, keep things moving, and note any issues that come up. Please give him, and everyone facilitating, the same respect you'd want from the room if you were the one up front.",
+        "RAs will open the meeting, take attendance, lead each part, and note any issues that come up. Please give everyone facilitating the same respect you'd want from the room if you were the one up front.",
         "Read and complete this Focus by 8:00 PM Wednesday. At the end you'll get a code to email to him."
       ],
       "check": {
-        "q": "Who leads Wednesday's meeting?",
+        "q": "Who is facilitating Wednesday's meeting?",
         "options": [
-          "James",
-          "RA Tristan",
-          "Whoever gets there first",
-          "Max and Jax"
+          "RD James",
+          "RAs from our team",
+          "A guest speaker",
+          "Nobody; it's canceled"
         ],
         "answer": 1
       }
@@ -25,32 +25,32 @@
       "list": [
         [
           "Welcome",
-          "Tristan opens the meeting and takes attendance."
+          "An RA opens the meeting and takes attendance."
         ],
         [
           "Warm-up",
-          "An RA will lead us in a warm-up."
+          "An RA leads us in a warm-up."
         ],
         [
           "Discussion",
-          "Stephanie leads a conversation about belonging and community: how each of us thinks about building community and engagement on our floors. There's a short article we'll read and talk through together."
+          "An RA leads a conversation about belonging and community: how each of us thinks about building community and engagement on our floors. There's a short article we'll read and talk through together."
         ],
         [
           "Reminders",
-          "Tristan closes with reminders about 'Cuse Chats and Health and Safety inspections, then dismisses us."
+          "We close with reminders about 'Cuse Chats and Health and Safety inspections."
         ],
         [
           "Listening session (optional)",
-          "Max and Jax will stay in the room afterward for anyone who wants to talk with them."
+          "A couple of RAs will stay in the room afterward for anyone who wants to talk."
         ]
       ],
       "check": {
-        "q": "Who leads the discussion on belonging and community?",
+        "q": "What's the discussion about this week?",
         "options": [
-          "Stephanie",
-          "James",
-          "Max and Jax",
-          "Tristan"
+          "Belonging and community on our floors",
+          "Duty schedules",
+          "Budget requests",
+          "Winter closing"
         ],
         "answer": 0
       }
@@ -58,24 +58,24 @@
     {
       "title": "Respect the facilitators",
       "paras": [
-        "Facilitating a room of your peers is harder than it looks. Please show Tristan, Stephanie, and our warm-up leader the respect you'd want for yourself: don't interrupt, don't talk over them, and save side conversations for later.",
+        "Facilitating a room of your peers is harder than it looks. Please show the RAs leading each part the respect you'd want for yourself: don't interrupt, don't talk over them, and save side conversations for later.",
         "Staying on track is how we all get out sooner. How long the meeting takes is up to all of us."
       ],
       "check": {
-        "q": "Someone at your table starts a side conversation while Stephanie is talking. What's the move?",
+        "q": "Someone at your table starts a side conversation while an RA is facilitating. What's the move?",
         "options": [
           "Join in, since RAs are running it",
           "Stay with the room and save it for after",
           "Leave early",
-          "Speak up over Stephanie so everyone can hear"
+          "Speak up over the facilitator so everyone can hear"
         ],
         "answer": 1
       }
     },
     {
-      "title": "The listening session with Max and Jax",
+      "title": "The optional listening session",
       "paras": [
-        "After the meeting, Max and Jax will stay in the room for anyone who would like to talk through questions or ideas about the RA role with fellow RAs. It's optional.",
+        "After the meeting, a couple of RAs will stay in the room for anyone who would like to talk through questions or ideas about the RA role with fellow RAs. It's optional.",
         "It's a good place for general feedback about the role or the department. Anything personal or private belongs in your 1:1 with RD James. He has asked for your feedback in every 1:1 so far and will keep asking, so you will always have that chance.",
         "Whatever you bring, please keep it respectful and professional."
       ],
