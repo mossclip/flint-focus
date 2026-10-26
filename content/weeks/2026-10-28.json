@@ -310,7 +310,7 @@
       "title": "Your room gets checked too",
       "paras": [
         "RA rooms need to be inspected as well, but not by RAs. RD James and RD Adrianna will check RA spaces in both Day Hall and Flint Hall together.",
-        "This happens the same day as our inspections, starting at 7:00 PM, and it will take place whether you're there or not. Your room will face no greater scrutiny than any other.",
+        "Flint RA rooms will be checked the same day as our inspections, Wednesday, November 11, in the early afternoon. This will take place whether you're there or not. Your room will face no greater scrutiny than any other.",
         "If you have questions about what is or isn't acceptable in your own room or anywhere else, please contact RD James and he'll talk it through with you."
       ],
       "link": {
@@ -320,7 +320,7 @@
       "check": {
         "q": "When are RA rooms checked?",
         "options": [
-          "November 11, starting at 7:00 PM, by RD James and RD Adrianna",
+          "November 11, in the early afternoon, by RD James and RD Adrianna",
           "November 11 at 8:30 PM, by other RAs",
           "Only if you're home",
           "Never; RA rooms are exempt"
