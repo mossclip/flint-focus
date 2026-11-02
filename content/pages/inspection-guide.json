@@ -1,0 +1,121 @@
+{
+  "slug": "inspection-guide",
+  "title": "Inspection Picture Guide",
+  "intro": "A quick visual guide for Flint's Health and Safety inspections. When in doubt, take a photo and note it, and James will decide.",
+  "source": "prohibited-items.html",
+  "paras": [],
+  "sections": [
+    {
+      "heading": "Flag it",
+      "verdict": "no",
+      "items": [
+        [
+          "1F56F",
+          "Candles and incense, even unused"
+        ],
+        [
+          "1F6AC",
+          "Smoking or vaping evidence"
+        ],
+        [
+          "1F9EF",
+          "Covered or tampered smoke detectors and sprinklers"
+        ],
+        [
+          "1F5BC",
+          "Tapestries or posters on the ceiling, within 24\" of it, or covering more than half a wall"
+        ],
+        [
+          "1F50C",
+          "Extension cords (only grounded power strips with a circuit breaker are OK)"
+        ],
+        [
+          "1F4A1",
+          "Halogen and multiheaded lamps"
+        ],
+        [
+          "1F525",
+          "Space heaters and electric blankets"
+        ],
+        [
+          "1F373",
+          "Hot plates, air fryers, rice cookers, crockpots, grills"
+        ],
+        [
+          "1F35E",
+          "Toasters and toaster ovens"
+        ],
+        [
+          "1F9C7",
+          "Waffle irons"
+        ],
+        [
+          "1F6AA",
+          "Furniture blocking a doorway"
+        ],
+        [
+          "1F6F4",
+          "E-scooters, e-bikes, hoverboards"
+        ],
+        [
+          "1F37A",
+          "Alcohol and high-risk drinking gear (beer funnels, beer pong tables)"
+        ],
+        [
+          "1F48A",
+          "Drugs or drug paraphernalia"
+        ],
+        [
+          "1F52A",
+          "Weapons, including BB and airsoft guns"
+        ],
+        [
+          "1F415",
+          "Pets that aren't approved ESAs"
+        ],
+        [
+          "1FAB3",
+          "Pests"
+        ],
+        [
+          "1F5D1",
+          "Excess trash"
+        ]
+      ]
+    },
+    {
+      "heading": "Note it, don't take it",
+      "verdict": "note",
+      "items": [
+        [
+          "1F37F",
+          "Microwaves without an internal smoke detector and auto shutoff: check the box and tell the resident"
+        ]
+      ]
+    },
+    {
+      "heading": "OK for this round",
+      "verdict": "ok",
+      "items": [
+        [
+          "1FA9F",
+          "Curtains"
+        ],
+        [
+          "1F9CA",
+          "Refrigerators"
+        ],
+        [
+          "1F943",
+          "Shot glasses"
+        ],
+        [
+          "1F4FA",
+          "Free-standing TVs (wall-mounted TVs are not allowed)"
+        ]
+      ]
+    }
+  ],
+  "credit": "Icons: OpenMoji, the open-source emoji and icon project (CC BY-SA 4.0).",
+  "source_text": "Read the full Prohibited Item Policy"
+}

@@ -174,3 +174,15 @@ html.locked #gate { display: flex; position: fixed; inset: 0; z-index: 100; alig
 .lock-card { background: var(--bg); color: var(--ink); border-radius: 16px; padding: 24px; max-width: 360px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
 .lock-h { font: 700 22px "Archivo", sans-serif; color: var(--orange); margin: 0 0 8px; }
 .check.locked { opacity: .55; }
+
+/* 2x2 table layout (matches the room: 1 2 / 3 4) */
+.quad { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0; }
+.quad .cell { border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
+.quad .cell-h { margin: 0 0 6px; font-weight: 700; }
+.quad .cell p:last-child { margin: 0; font-size: 0.95em; line-height: 1.4; }
+/* illustrated pages */
+.illus { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin: 16px 0; }
+.illus figure { margin: 0; border: 1px solid var(--line); border-radius: 10px; padding: 12px; text-align: center; }
+.illus img { width: 64px; height: 64px; }
+.illus figcaption { margin-top: 8px; font-size: 0.95em; line-height: 1.35; }
+.illus .ok { color: #1a7f37; font-weight: 700; } .illus .no { color: #b42318; font-weight: 700; }
