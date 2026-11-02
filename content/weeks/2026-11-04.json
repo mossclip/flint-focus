@@ -39,10 +39,10 @@
       "check": {
         "q": "What should you do as you read this week's Focus?",
         "options": [
-          "Skim it quickly",
+          "Skim it once and hope for the best later",
           "Take notes on the important details",
-          "Wait for the meeting",
-          "Skip to the code"
+          "Read it out loud to your roommate",
+          "Skip straight to the code at the end"
         ],
         "answer": 1
       }
@@ -123,12 +123,12 @@
       "check": {
         "q": "Why doesn't anyone inspect their own floor?",
         "options": [
-          "To protect you from accusations of favoritism or bias",
-          "Because your floor is skipped",
-          "So you finish faster",
-          "Because your residents know you're coming"
+          "Because your own floor gets a free pass",
+          "So your residents can't bribe you",
+          "To protect you from accusations of bias",
+          "Because James likes to keep you guessing"
         ],
-        "answer": 0
+        "answer": 2
       }
     },
     {
@@ -157,10 +157,10 @@
       "check": {
         "q": "You've knocked and announced twice with no answer. What's next?",
         "options": [
-          "Walk in",
-          "Skip the room",
-          "Knock again, say \"RA, keying in,\" then unlock, open a few inches, and announce \"RA, entering the room\"",
-          "Call James"
+          "Assume it's empty and walk right in without a word",
+          "Slide a note under the door and come back next week",
+          "Knock, say \"RA, keying in,\" then enter as trained",
+          "Call the resident's mom and ask for her permission"
         ],
         "answer": 2
       }
@@ -174,12 +174,12 @@
       "check": {
         "q": "What's the recommended order?",
         "options": [
-          "Roompact on your phone at each door",
-          "Paper roster for every room, then Roompact and IRs in the classroom",
-          "Incident reports first, then the roster",
-          "Only fill out Roompact for rooms with issues"
+          "Paper roster first, then Roompact in the classroom",
+          "Roompact on your phone at every single door you visit",
+          "Incident reports first, then the paper roster after",
+          "Memorize every room and type it all up tomorrow night"
         ],
-        "answer": 1
+        "answer": 0
       }
     },
     {
@@ -195,12 +195,12 @@
       "check": {
         "q": "A room has no issues. What do you do?",
         "options": [
-          "Skip it",
-          "Submit a form and check \"No concerns were observed\"",
-          "Tell James later",
-          "Only submit if a resident was home"
+          "Skip it entirely, since there's nothing to report",
+          "Draw a smiley face on the paper roster and move on",
+          "Submit it and check \"No concerns were observed\"",
+          "Only submit one if a resident happened to be home"
         ],
-        "answer": 1
+        "answer": 2
       }
     },
     {
@@ -234,7 +234,7 @@
           "6 inches",
           "12 inches",
           "24 inches",
-          "They can touch the ceiling"
+          "Touching is fine"
         ],
         "answer": 2
       }
@@ -248,10 +248,10 @@
       "check": {
         "q": "You confiscate a waffle iron. What goes on it?",
         "options": [
-          "Nothing",
-          "Masking tape with the room number and resident's name if known",
-          "A sticky note with your name",
-          "A Roompact QR code"
+          "A sticky note with your own name and phone number",
+          "Masking tape with the room and resident's name",
+          "A Roompact QR code and a handwritten thank-you card",
+          "Nothing at all; just carry it out under your arm"
         ],
         "answer": 1
       }
@@ -266,12 +266,12 @@
       "check": {
         "q": "You find a regular microwave with no smoke detector or auto shutoff. What do you do?",
         "options": [
-          "Ignore it",
-          "Take it",
-          "Check the microwave box and tell the resident if they're there",
-          "Unplug it"
+          "Pop some popcorn to test it, then move on to the next",
+          "Carry it all the way down to the RD office yourself",
+          "Unplug it and hide it in the closet so nobody notices",
+          "Check the microwave box and tell the resident"
         ],
-        "answer": 2
+        "answer": 3
       }
     },
     {
@@ -309,10 +309,10 @@
       "check": {
         "q": "Which rooms get a Roompact form?",
         "options": [
-          "Only rooms with issues",
-          "Every room",
+          "Only rooms with an obvious issue",
+          "Every room, issue or not",
           "Only rooms where someone is home",
-          "Only your own floor"
+          "Only rooms on your own floor"
         ],
         "answer": 1
       }
@@ -328,7 +328,7 @@
           "By 6:00 PM",
           "By 7:45 PM",
           "By 9:00 PM",
-          "It doesn't matter"
+          "Anytime; just show up late"
         ],
         "answer": 1
       }
@@ -345,12 +345,12 @@
       "check": {
         "q": "How many 1:1s should you book?",
         "options": [
-          "Just one",
-          "At least two, and more if you'd like",
-          "Exactly three",
-          "None"
+          "Just one, and only if James asks twice",
+          "Exactly three, no more and no less",
+          "At least two, more if you'd like",
+          "None; James can read your mind"
         ],
-        "answer": 1
+        "answer": 2
       }
     }
   ]
