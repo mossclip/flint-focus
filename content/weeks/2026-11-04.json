@@ -336,10 +336,11 @@
     {
       "title": "Book your 1:1s by Wednesday night",
       "paras": [
-        "Please book **at least two** \"RA 1:1 with James\" times for the rest of the semester by **Wednesday, November 4 at 10:00 PM**. You're welcome to book as many as you'd like. Happy to chat!"
+        "Please book **at least two** \"RA 1:1 with James\" times for the rest of the semester by **Wednesday, November 4 at 10:00 PM**. You're welcome to book as many as you'd like. Happy to chat!",
+        "Please be logged into your syr.edu account when you book, so each 1:1 shows up on your Outlook calendar."
       ],
       "link": {
-        "href": "https://bookings.cloud.microsoft/book/MeetingwithJamesBialek30minutes@bookings.syr.edu/",
+        "href": "https://bookings.cloud.microsoft/bookwithme/user/6d1da4174835445b98267dda7b80dc90@syr.edu/meetingtype/XSs8fCyAv0iqxG7R1l0QKw2?anonymous&ismsaljsauthenabled",
         "text": "Book your 1:1s"
       },
       "check": {
