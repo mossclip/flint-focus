@@ -3,7 +3,32 @@
   "label": "November 4 Team Meeting",
   "code": "Maple Compass",
   "excused": [],
-  "tables": [["Addy", "James V.", "Mark", "Max"], ["Henry", "Keira", "Michael", "Stephanie"], ["Jax", "Jazera", "Rem", "Tristan"], ["Calysta", "Gabby", "Giselle", "Hannah"]],
+  "tables": [
+    [
+      "Addy",
+      "James V.",
+      "Mark",
+      "Max"
+    ],
+    [
+      "Henry",
+      "Keira",
+      "Michael",
+      "Stephanie"
+    ],
+    [
+      "Jax",
+      "Jazera",
+      "Rem",
+      "Tristan"
+    ],
+    [
+      "Calysta",
+      "Gabby",
+      "Giselle",
+      "Hannah"
+    ]
+  ],
   "screens": [
     {
       "title": "Grab a pen",
@@ -13,7 +38,12 @@
       ],
       "check": {
         "q": "What should you do as you read this week's Focus?",
-        "options": ["Skim it quickly", "Take notes on the important details", "Wait for the meeting", "Skip to the code"],
+        "options": [
+          "Skim it quickly",
+          "Take notes on the important details",
+          "Wait for the meeting",
+          "Skip to the code"
+        ],
         "answer": 1
       }
     },
@@ -26,8 +56,28 @@
         "type": "pick",
         "q": "When do we meet for inspections?",
         "fields": [
-          {"label": "Date", "options": ["Wednesday, November 4", "Monday, November 9", "Tuesday, November 10", "Wednesday, November 11", "Thursday, November 12"], "answer": "Wednesday, November 11"},
-          {"label": "Time", "options": ["7:00 PM", "8:00 PM", "8:30 PM", "9:00 PM", "10:00 PM"], "answer": "8:30 PM"}
+          {
+            "label": "Date",
+            "options": [
+              "Wednesday, November 4",
+              "Monday, November 9",
+              "Tuesday, November 10",
+              "Wednesday, November 11",
+              "Thursday, November 12"
+            ],
+            "answer": "Wednesday, November 11"
+          },
+          {
+            "label": "Time",
+            "options": [
+              "7:00 PM",
+              "8:00 PM",
+              "8:30 PM",
+              "9:00 PM",
+              "10:00 PM"
+            ],
+            "answer": "8:30 PM"
+          }
         ]
       }
     },
@@ -37,19 +87,82 @@
         "You'll inspect in pairs, and nobody inspects their own floor. This protects you from any accusation of favoritism or bias, and it means you won't have to document your own residents."
       ],
       "list": [
-        ["1A", "Mark and Giselle"],
-        ["1C", "Keira and Jazera"],
-        ["2A", "Max and Addy"],
-        ["2C", "Tristan and Stephanie"],
-        ["3A", "James V. and Calysta"],
-        ["3C", "Henry and Hannah"],
-        ["4A", "Michael and Jax"],
-        ["4C", "Rem and Gabby"]
+        [
+          "1A",
+          "Mark and Giselle"
+        ],
+        [
+          "1C",
+          "Keira and Jazera"
+        ],
+        [
+          "2A",
+          "Max and Addy"
+        ],
+        [
+          "2C",
+          "Tristan and Stephanie"
+        ],
+        [
+          "3A",
+          "James V. and Calysta"
+        ],
+        [
+          "3C",
+          "Henry and Hannah"
+        ],
+        [
+          "4A",
+          "Michael and Jax"
+        ],
+        [
+          "4C",
+          "Rem and Gabby"
+        ]
       ],
       "check": {
         "q": "Why doesn't anyone inspect their own floor?",
-        "options": ["To protect you from accusations of favoritism or bias", "Because your floor is skipped", "So you finish faster", "Because your residents know you're coming"],
+        "options": [
+          "To protect you from accusations of favoritism or bias",
+          "Because your floor is skipped",
+          "So you finish faster",
+          "Because your residents know you're coming"
+        ],
         "answer": 0
+      }
+    },
+    {
+      "title": "Entering a room",
+      "list": [
+        [
+          "1. Knock and announce",
+          "Loudly: \"RA, Health and Safety Inspections!\""
+        ],
+        [
+          "2. No answer?",
+          "Knock and announce again, then wait a few seconds."
+        ],
+        [
+          "3. Still no answer?",
+          "Knock again and say \"RA, keying in.\" Unlock the door, open it a couple of inches, and announce \"RA, entering the room.\""
+        ],
+        [
+          "Someone answers?",
+          "Greet them and explain that you need to come in for Health and Safety inspections."
+        ]
+      ],
+      "after": [
+        "**Suggestion:** one partner stays at the door and keeps it open while the other goes in to look around."
+      ],
+      "check": {
+        "q": "You've knocked and announced twice with no answer. What's next?",
+        "options": [
+          "Walk in",
+          "Skip the room",
+          "Knock again, say \"RA, keying in,\" then unlock, open a few inches, and announce \"RA, entering the room\"",
+          "Call James"
+        ],
+        "answer": 2
       }
     },
     {
@@ -60,7 +173,12 @@
       ],
       "check": {
         "q": "What's the recommended order?",
-        "options": ["Roompact on your phone at each door", "Paper roster for every room, then Roompact and IRs in the classroom", "Incident reports first, then the roster", "Only fill out Roompact for rooms with issues"],
+        "options": [
+          "Roompact on your phone at each door",
+          "Paper roster for every room, then Roompact and IRs in the classroom",
+          "Incident reports first, then the roster",
+          "Only fill out Roompact for rooms with issues"
+        ],
         "answer": 1
       }
     },
@@ -70,26 +188,54 @@
         "No issues? Nobody home? You still submit a form. In each section, check what you saw or check \"No concerns were observed.\"",
         "Be specific in your notes: \"two used candles on the left desk,\" not just \"candles.\""
       ],
-      "link": {"href": "https://roompact.com/forms/#/form/LAmGXR", "text": "Open the inspection form"},
+      "link": {
+        "href": "https://roompact.com/forms/#/form/LAmGXR",
+        "text": "Open the inspection form"
+      },
       "check": {
         "q": "A room has no issues. What do you do?",
-        "options": ["Skip it", "Submit a form and check \"No concerns were observed\"", "Tell James later", "Only submit if a resident was home"],
+        "options": [
+          "Skip it",
+          "Submit a form and check \"No concerns were observed\"",
+          "Tell James later",
+          "Only submit if a resident was home"
+        ],
         "answer": 1
       }
     },
     {
       "title": "What you're looking for",
       "list": [
-        ["Substance use", "Alcohol, high-risk drinking gear (beer funnels, beer pong tables), drugs or paraphernalia"],
-        ["Fire safety", "Candles or incense, smoking, covered smoke detectors or sprinklers, halogen or multiheaded lamps, extension cords, prohibited appliances, blocked doorways"],
-        ["Wall hangings", "At least 24 inches from the ceiling; no more than half of a surface; not covering switches or outlets"],
-        ["General safety", "Damage, excess trash, pests, unapproved pets, removed window screens, weapons"]
+        [
+          "Substance use",
+          "Alcohol, high-risk drinking gear (beer funnels, beer pong tables), drugs or paraphernalia"
+        ],
+        [
+          "Fire safety",
+          "Candles or incense, smoking, covered smoke detectors or sprinklers, halogen or multiheaded lamps, extension cords, prohibited appliances, blocked doorways"
+        ],
+        [
+          "Wall hangings",
+          "At least 24 inches from the ceiling; no more than half of a surface; not covering switches or outlets"
+        ],
+        [
+          "General safety",
+          "Damage, excess trash, pests, unapproved pets, removed window screens, weapons"
+        ]
       ],
-      "link": {"href": "https://mossclip.github.io/flint-focus/pages/inspection-guide.html", "text": "Picture guide: what to flag"},
+      "link": {
+        "href": "https://mossclip.github.io/flint-focus/pages/inspection-guide.html",
+        "text": "Picture guide: what to flag"
+      },
       "link_last": true,
       "check": {
         "q": "How far from the ceiling do posters and tapestries need to be?",
-        "options": ["6 inches", "12 inches", "24 inches", "They can touch the ceiling"],
+        "options": [
+          "6 inches",
+          "12 inches",
+          "24 inches",
+          "They can touch the ceiling"
+        ],
         "answer": 2
       }
     },
@@ -101,7 +247,12 @@
       ],
       "check": {
         "q": "You confiscate a waffle iron. What goes on it?",
-        "options": ["Nothing", "Masking tape with the room number and resident's name if known", "A sticky note with your name", "A Roompact QR code"],
+        "options": [
+          "Nothing",
+          "Masking tape with the room number and resident's name if known",
+          "A sticky note with your name",
+          "A Roompact QR code"
+        ],
         "answer": 1
       }
     },
@@ -114,23 +265,55 @@
       ],
       "check": {
         "q": "You find a regular microwave with no smoke detector or auto shutoff. What do you do?",
-        "options": ["Ignore it", "Take it", "Check the microwave box and tell the resident if they're there", "Unplug it"],
+        "options": [
+          "Ignore it",
+          "Take it",
+          "Check the microwave box and tell the resident if they're there",
+          "Unplug it"
+        ],
         "answer": 2
       }
     },
     {
       "title": "Inspections, in short",
       "list": [
-        ["When", "Wednesday, November 11, 8:30 PM in the classroom"],
-        ["Where", "Your assigned floor, with your partner"],
-        ["How", "Paper roster for every room first, then Roompact and IRs back in the classroom"],
-        ["Every room", "A Roompact form for every room, issue or not"],
-        ["Evidence", "Photos of anything documented; tape and label anything confiscated"],
-        ["Questions", "Ask James before November 11"]
+        [
+          "When",
+          "Wednesday, November 11, 8:30 PM in the classroom"
+        ],
+        [
+          "Where",
+          "Your assigned floor, with your partner"
+        ],
+        [
+          "Entering",
+          "Knock and announce twice, then \"RA, keying in\" and \"RA, entering the room\""
+        ],
+        [
+          "How",
+          "Paper roster for every room first, then Roompact and IRs back in the classroom"
+        ],
+        [
+          "Every room",
+          "A Roompact form for every room, issue or not"
+        ],
+        [
+          "Evidence",
+          "Photos of anything documented; tape and label anything confiscated"
+        ],
+        [
+          "Questions",
+          "Ask James before November 11"
+        ]
       ],
       "check": {
         "q": "Which rooms get a Roompact form?",
-        "options": ["Only rooms with issues", "Every room", "Only rooms where someone is home", "Only your own floor"],
+        "options": [
+          "Only rooms with issues",
+          "Every room",
+          "Only rooms where someone is home",
+          "Only your own floor"
+        ],
         "answer": 1
       }
     },
@@ -141,7 +324,12 @@
       ],
       "check": {
         "q": "Next semester, when do you need to be out of class on Wednesdays?",
-        "options": ["By 6:00 PM", "By 7:45 PM", "By 9:00 PM", "It doesn't matter"],
+        "options": [
+          "By 6:00 PM",
+          "By 7:45 PM",
+          "By 9:00 PM",
+          "It doesn't matter"
+        ],
         "answer": 1
       }
     },
@@ -150,10 +338,18 @@
       "paras": [
         "Please book **at least two** \"RA 1:1 with James\" times for the rest of the semester by **Wednesday, November 4 at 10:00 PM**. You're welcome to book as many as you'd like. Happy to chat!"
       ],
-      "link": {"href": "https://bookings.cloud.microsoft/book/MeetingwithJamesBialek30minutes@bookings.syr.edu/", "text": "Book your 1:1s"},
+      "link": {
+        "href": "https://bookings.cloud.microsoft/book/MeetingwithJamesBialek30minutes@bookings.syr.edu/",
+        "text": "Book your 1:1s"
+      },
       "check": {
         "q": "How many 1:1s should you book?",
-        "options": ["Just one", "At least two, and more if you'd like", "Exactly three", "None"],
+        "options": [
+          "Just one",
+          "At least two, and more if you'd like",
+          "Exactly three",
+          "None"
+        ],
         "answer": 1
       }
     }
