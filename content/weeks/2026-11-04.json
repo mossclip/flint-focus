@@ -318,16 +318,17 @@
       }
     },
     {
-      "title": "Spring registration: free by 7:45 PM Wednesdays",
+      "title": "Meeting times: 8:30 PM this semester, 8:00 PM in the spring",
       "paras": [
-        "Next semester, team meetings are every Wednesday at 8:00 PM, and every RA needs to be there on time. When you register, make sure you're **out of class by 7:45 PM on Wednesdays.**"
+        "**This semester, every team meeting starts at 8:30 PM.** James moved it back 30 minutes because some RAs had class conflicts they couldn't fix this term.",
+        "**Next semester, team meetings go back to 8:00 PM** every Wednesday, and every RA needs to be there on time. When you register for spring classes, make sure you're **out of class by 7:45 PM on Wednesdays.**"
       ],
       "check": {
-        "q": "Next semester, when do you need to be out of class on Wednesdays?",
+        "q": "This semester team meetings start at 8:30 PM. When do you need to be out of class on Wednesdays next semester?",
         "options": [
           "By 6:00 PM",
           "By 7:45 PM",
-          "By 9:00 PM",
+          "By 8:30 PM, same as now",
           "Anytime; just show up late"
         ],
         "answer": 1
