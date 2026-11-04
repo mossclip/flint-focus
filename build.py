@@ -133,9 +133,9 @@ def tables_screen(w):
     return {"title": "Your table this week",
             "paras": ["Tables are numbered like this in the room. Find your name and take note of your table."],
             "quad": [[f"Table {i}", ", ".join(n + (" (excused this week)" if n in w.get("excused", []) else "") for n in t)] for i, t in enumerate(w["tables"], 1)],
-            "after": ["Please come early and be ready to begin promptly at 8:00 PM."],
+            "after": ["Please come early and be ready to begin promptly at 8:30 PM."],
             "check": {"q": "When does the meeting begin?",
-                      "options": ["7:30 PM", "8:00 PM, promptly", "8:15 PM", "Whenever everyone arrives"],
+                      "options": ["8:00 PM", "8:30 PM, promptly", "8:15 PM", "Whenever everyone arrives"],
                       "answer": 1}}
 
 
