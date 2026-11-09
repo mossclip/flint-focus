@@ -1,0 +1,401 @@
+{
+  "date": "2026-11-11",
+  "label": "November 11 Team Meeting",
+  "code": "Wobbly Pancake",
+  "excused": [],
+  "screens": [
+    {
+      "title": "A big week",
+      "paras": [
+        "This week we have **Health and Safety inspections** on Wednesday night, the start of **Door Knock #2**, and a quick note about Office Hours. Stick around to the end for a shout-out.",
+        "Complete this Focus by 8:30 PM Wednesday. At the end you'll get a code to email to James."
+      ],
+      "check": {
+        "q": "Which two big things are on this week's plate?",
+        "options": [
+          "Door Knock #2 and a building-wide fire drill run by the front desk",
+          "'Cuse Chat #2 kicks off and the floor meetings for spring",
+          "Health and Safety inspections and the start of Door Knock #2",
+          "The end of Door Knock #2 and a round of Office Hours make-ups"
+        ],
+        "answer": 2
+      }
+    },
+    {
+      "title": "Inspections: Wednesday at 8:30 PM",
+      "paras": [
+        "We need every one of you with us for this, so please plan to be in our team meeting classroom at **8:30 PM** on **Wednesday, November 11**, with your **laptop**.",
+        "You'll need your laptop when we come back to the classroom afterward."
+      ],
+      "check": {
+        "type": "pick",
+        "q": "Where and when do we meet on Wednesday?",
+        "fields": [
+          {
+            "label": "Place",
+            "options": [
+              "The lobby",
+              "The team meeting classroom",
+              "Your own floor",
+              "Flint 100I"
+            ],
+            "answer": "The team meeting classroom"
+          },
+          {
+            "label": "Time",
+            "options": [
+              "7:00 PM",
+              "8:00 PM",
+              "8:30 PM",
+              "9:00 PM",
+              "10:00 PM"
+            ],
+            "answer": "8:30 PM"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Your floor and your partner",
+      "paras": [
+        "Same as last week, and nobody inspects their own floor."
+      ],
+      "list": [
+        [
+          "1A",
+          "Mark and Giselle"
+        ],
+        [
+          "1C",
+          "Keira and Jazera"
+        ],
+        [
+          "2A",
+          "Max and Addy"
+        ],
+        [
+          "2C",
+          "Tristan and Stephanie"
+        ],
+        [
+          "3A",
+          "James V. and Calysta"
+        ],
+        [
+          "3C",
+          "Henry and Hannah"
+        ],
+        [
+          "4A",
+          "Michael and Jax"
+        ],
+        [
+          "4C",
+          "Rem and Gabby"
+        ]
+      ],
+      "check": {
+        "q": "Who is inspecting 3C?",
+        "options": [
+          "James V. and Calysta",
+          "Max and Addy",
+          "Henry and Hannah",
+          "Mark and Giselle"
+        ],
+        "answer": 2
+      }
+    },
+    {
+      "title": "A quick refresher",
+      "paras": [
+        "**Entering a room:** knock and announce twice (\"RA, Health and Safety Inspections!\"). Then say \"RA, keying in\" and, once the door is open, \"RA, entering the room.\"",
+        "**Paper first.** Fill in your floor's printed roster for every room.",
+        "**Don't flag** curtains, fridges or shot glasses. For microwaves without auto shutoff, check the box but don't take them."
+      ],
+      "check": {
+        "q": "You find a microwave with no auto shutoff. What do you do?",
+        "options": [
+          "Check the box on the form, but leave it in the room",
+          "Take it with you and tape a label on it with the room number",
+          "Skip it entirely, since microwaves aren't part of inspections",
+          "Unplug it and leave a note asking the resident to remove it"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "title": "Take photos of everything",
+      "paras": [
+        "Take a photo of anything you notice, **even small things**. Photos document the issue, and they protect you."
+      ],
+      "check": {
+        "q": "You spot something minor. Do you still take a photo?",
+        "options": [
+          "Only if you plan to confiscate it",
+          "Yes, because photos document the issue and protect you",
+          "No, photos are just for serious stuff",
+          "Only if your partner agrees it's worth it"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "title": "Back to the classroom: submit it all that night",
+      "paras": [
+        "When your floor is done, come back to the classroom and submit everything **that night**:",
+        "A **Roompact form for every room**, issue or not.",
+        "An **incident report for real conduct violations**, like alcohol (photograph it, then dump it), drugs (call DPS first), and smoking or vaping."
+      ],
+      "check": {
+        "q": "You find a vape in a room. What do you submit?",
+        "options": [
+          "A Roompact form only",
+          "An incident report only",
+          "Nothing, as long as you took a photo",
+          "A Roompact form and an incident report, both that night"
+        ],
+        "answer": 3
+      }
+    },
+    {
+      "title": "Next up: Door Knock #2 🛍️",
+      "paras": [
+        "That's it for inspections. Thank you in advance for a smooth night!",
+        "The rest of this Focus is all about **Door Knock #2**: what's in the bags, how to pack them, and when to get it done."
+      ],
+      "check": {
+        "q": "What are the next few screens about?",
+        "options": [
+          "More inspection rules",
+          "Spring duty scheduling",
+          "Door Knock #2: the bags, packing, and timing",
+          "Next week's meeting agenda"
+        ],
+        "answer": 2
+      }
+    },
+    {
+      "title": "Door Knock #2: Wellness Check-In",
+      "paras": [
+        "This round is a lighter lift than the first one. You're stopping by with a little goody bag and asking **one question** to see how your residents are doing overall.",
+        "**Please start right away.** As soon as your bags are packed, start knocking and logging. With Thanksgiving break in the middle, we don't have much time, so please don't wait until after break to get going."
+      ],
+      "check": {
+        "q": "What makes Door Knock #2 a lighter lift than the first one?",
+        "options": [
+          "You only knock on half your floor",
+          "You drop off a goody bag and ask just one question",
+          "You can do it all over text instead",
+          "There's no Roompact form afterward"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "title": "Pack your bags",
+      "paras": [
+        "The supplies aren't in yet. When they arrive, James will send a group text, and they'll be on the big table in the resource room. Please come down and pack yours as soon as you can.",
+        "Pack **one bag per resident** on your floor:"
+      ],
+      "list": [
+        [
+          "2 pieces of candy",
+          "Not the fanciest candy in the world, but 1,000 pieces adds up fast!"
+        ],
+        [
+          "A mini fidget spinner",
+          ""
+        ],
+        [
+          "A star stress ball",
+          ""
+        ],
+        [
+          "A Wellness QR code",
+          "Cut one from the sheet on the table"
+        ]
+      ],
+      "after": [
+        "Then put a sticker on the outside and tie it closed. Bring a tote or bag to carry them back to your room."
+      ],
+      "check": {
+        "q": "Which of these does NOT go inside the bag?",
+        "options": [
+          "A star stress ball",
+          "A Wellness QR code cut from the sheet on the table",
+          "A mini fidget spinner",
+          "The sticker, which goes on the outside"
+        ],
+        "answer": 3
+      }
+    },
+    {
+      "title": "Done packing? Send the code word",
+      "paras": [
+        "Once your bags are packed, text or email James **\"Baggy Boogie\"** so he knows you're all set."
+      ],
+      "check": {
+        "q": "What's the code word once your bags are packed?",
+        "options": [
+          "Bag Boogie",
+          "Boogie Bags",
+          "Baggie Bonanza",
+          "Baggy Boogie"
+        ],
+        "answer": 3
+      }
+    },
+    {
+      "title": "Ask one question, your way",
+      "paras": [
+        "Knock, chat and hand over the bag. Ask **one question**, in whatever way feels natural to you. If you'd like a starting point, here are a few from the Curriculum Team:",
+        "\"How are your energy levels holding up as we head into the winter months?\" · \"What's the first thing you're going to do the second your last final is over?\" · \"What's something you've crossed off your to-do list this week that you're proud of?\" · \"What's something you can do to refill your tank through the last stretch of the semester?\"",
+        "**You don't have to use these.** Ask it however you like."
+      ],
+      "check": {
+        "q": "How should you ask your one question?",
+        "options": [
+          "However feels natural; the examples are just a starting point",
+          "Read one of the examples word for word, so it's consistent",
+          "Ask all four of the examples, in the same order every time",
+          "Hand the resident a short survey and collect it the next day"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "title": "Log it within 24 hours",
+      "paras": [
+        "After each visit, log it in the **Door Knock #2** form in Roompact within 24 hours."
+      ],
+      "check": {
+        "q": "You knocked on a door Thursday at 7 PM. When should it be logged?",
+        "options": [
+          "By Thursday at midnight",
+          "By Friday at 7 PM",
+          "Once your whole floor is finished",
+          "By the end of next week"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "title": "This week and next week are crunch time",
+      "paras": [
+        "**Every resident needs to be reached by Wednesday, December 2.** No knocks over Thanksgiving break (November 20 to 29).",
+        "This week and next week are really our crunch time. That's when James would love to see the **vast majority** of your knocks logged, so that after Thanksgiving it's just a few stragglers."
+      ],
+      "check": {
+        "q": "When should most of your knocks be done?",
+        "options": [
+          "Over Thanksgiving break, while the building is quiet and calm",
+          "The week after Thanksgiving, all at once before the deadline",
+          "Anytime at all, as long as it's done before finals end",
+          "This week and next week, before Thanksgiving"
+        ],
+        "answer": 3
+      }
+    },
+    {
+      "title": "The foam board",
+      "paras": [
+        "The Wellness Challenge board lives in **Flint 100I** (the middle office, unlocked). The on-duty RA brings it in when they come on duty and sets it back out in the lobby the next morning."
+      ],
+      "check": {
+        "q": "You're on duty tonight. What do you do with the board?",
+        "options": [
+          "Leave it in the lobby overnight; custodial takes care of it",
+          "Bring it to your own room for the night so it stays safe",
+          "Bring it into Flint 100I, then set it back out in the morning",
+          "Nothing at all; only James moves the board in and out"
+        ],
+        "answer": 2
+      }
+    },
+    {
+      "title": "Need a hand?",
+      "paras": [
+        "As always, James is happy to help. If you're having trouble reaching people, or there's a resident you'd rather not knock on alone, just reach out and we'll figure it out together."
+      ],
+      "check": {
+        "q": "There's a resident you'd rather not knock on alone. What's the move?",
+        "options": [
+          "Skip them for now; it's okay to miss one resident",
+          "Leave the bag outside their door with a note attached",
+          "Ask one of your other residents to go knock with you",
+          "Reach out to James, and we'll figure it out together"
+        ],
+        "answer": 3
+      }
+    },
+    {
+      "title": "Office Hours reflections 📝",
+      "paras": [
+        "Check your inbox: James sent each of you a quick note Monday morning with your Office Hours count. You only need **one** reflection per week, even if you split your hours into two sessions. But we really do need that one reflection **every single week**, even when no residents stop by.",
+        "**We should have 10 in by the end of this week.** If you're not sure how many you have done, or which weeks you may still need to submit, please reach out to James. :)"
+      ],
+      "check": {
+        "q": "You split your office hours into two sessions this week. How many reflections do you submit?",
+        "options": [
+          "One",
+          "Two, one per session",
+          "None, if nobody stopped by",
+          "One for every hour you were there"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "title": "Next week's team meeting: the ZenDen 🧘",
+      "paras": [
+        "On **Wednesday, November 18**, we're not meeting at our usual place. Instead, we're heading to **the ZenDen in Haven Hall** to try something new and give feedback on it. You'll be split into two groups:"
+      ],
+      "list": [
+        [
+          "Group 1 · 8:00 to 9:00 PM",
+          "Gabby, Jax, James V., Jazera, Mark, Michael, Tristan"
+        ],
+        [
+          "Group 2 · 9:00 to 10:00 PM",
+          "Addy, Calysta, Giselle, Henry, Keira, Max, Rem, Stephanie"
+        ]
+      ],
+      "after": [
+        "Hannah is excused, since she's on duty that night.",
+        "James tried to accommodate people who have class before our usual time, but please let him know if there are any issues with this. **This is still a mandatory team meeting.**"
+      ],
+      "link": {
+        "href": "../files/zenden-preview.pdf",
+        "text": "See what the ZenDen is"
+      },
+      "check": {
+        "q": "You're in Group 2. When do you go to the ZenDen?",
+        "options": [
+          "8:00 PM",
+          "8:30 PM, our usual time",
+          "9:00 PM",
+          "10:00 PM"
+        ],
+        "answer": 2
+      },
+      "link_last": true
+    },
+    {
+      "title": "🥦 The Golden Broccoli Club!",
+      "paras": [
+        "You know James loves a Golden award, but this one isn't his idea. Kim is starting the **Golden Broccoli Club** to recognize RAs who did an amazing job on 'Cuse Chats, and she's thrilled to announce that **FOURTEEN of you** will be inducted this month!",
+        "So proud of this team. 🎉"
+      ],
+      "check": {
+        "q": "Whose idea is the Golden Broccoli Club?",
+        "options": [
+          "James's",
+          "The RA team's",
+          "Kim's",
+          "Residential Living's student board"
+        ],
+        "answer": 2
+      }
+    }
+  ]
+}
