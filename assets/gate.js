@@ -24,7 +24,7 @@
       var raw = input.value.replace(/[\s,]/g, "");
       var n = /^\d{4,12}$/.test(raw) ? parseInt(raw, 10) : NaN;
       if (n > 1000 && isPrime(n)) {
-        try { localStorage.setItem(key, "1"); } catch (err) {}
+        try { localStorage.setItem(key, "1"); localStorage.setItem("focus-pin-" + (window.FOCUS_WEEK || ""), String(n)); } catch (err) {}
         root.classList.remove("locked");
         gate.remove();
         var h = document.querySelector("main h1");

@@ -5,6 +5,9 @@ from urllib.parse import quote
 ROOT = os.path.dirname(os.path.abspath(__file__))
 site = json.load(open(os.path.join(ROOT, "content", "site.json")))
 weeks = [json.load(open(f)) for f in glob.glob(os.path.join(ROOT, "content", "weeks", "*.json"))]
+# A week with "preview": "<slug>" is built only as an unlisted page at preview/<slug>.html.
+previews = [w for w in weeks if w.get("preview")]
+weeks = [w for w in weeks if not w.get("preview")]
 weeks.sort(key=lambda w: w["date"], reverse=True)
 GATE_WEEK = weeks[0]["date"] if weeks else ""
 import time
@@ -29,11 +32,12 @@ def bars_html(b):
     return f'<figure class="bars">{cap}{rows}</figure>'
 
 
-def page(title, body, prefix="", current="", script=False):
+def page(title, body, prefix="", current="", script=False, gate=None):
     def nav(href, label, key):
         cur = ' aria-current="page"' if key == current else ""
         return f'<a href="{prefix}{href}"{cur}>{label}</a>'
-    js = f'<script src="{prefix}assets/app.js?v={VER}" defer></script>' if script else ""
+    js = (f'<script src="{prefix}assets/app.js?v={VER}" defer></script>'
+          f'<script src="{prefix}assets/lookup.js?v={VER}" defer></script>') if script else ""
     return f"""<!doctype html>
 <html lang="en" class="locked">
 <head>
@@ -46,7 +50,7 @@ def page(title, body, prefix="", current="", script=False):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Figtree:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="{prefix}assets/style.css?v={VER}">
-<script>window.FOCUS_WEEK="{GATE_WEEK}";</script>
+<script>window.FOCUS_WEEK="{gate or GATE_WEEK}";</script>
 <script src="{prefix}assets/gate.js"></script>
 <noscript><style>html.locked .shell{{visibility:visible}}#gate{{display:none}}</style></noscript>
 {js}
@@ -67,7 +71,7 @@ def page(title, body, prefix="", current="", script=False):
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="wrap top-inner">
-    <a class="brand" href="{prefix}index.html"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15 15l5.5 5.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>{e(site['name'])}<span class="team">{e(site['team'])}</span></a>
+    <a class="brand" href="{prefix}index.html"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15 15l5.5 5.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>{e(site['name'])}{f'<span class="team">{e(site["team"])}</span>' if site.get('team') else ''}</a>
     <nav aria-label="Main">{nav('index.html', 'This Week', 'this')}{nav('archive.html', 'Past Weeks', 'archive')}{nav('how-it-works.html', 'How It Works', 'how')}</nav>
   </div>
 </header>
@@ -82,14 +86,16 @@ def page(title, body, prefix="", current="", script=False):
 
 
 def screen_html(i, total, s, wid):
-    out = [f'<section class="screen" id="s{i}" aria-labelledby="h{i}">',
+    theme = f' theme-{s["theme"]}' if s.get("theme") else ""
+    out = [f'<section class="screen{theme}" id="s{i}" aria-labelledby="h{i}">',
            f'<p class="step">Step {i + 1} of {total}</p>',
            f'<h2 id="h{i}" tabindex="-1">{e(s["title"])}</h2>']
     for p in s.get("paras", []):
         out.append(f"<p>{fmt(p)}</p>")
     if s.get("bars"):
         out.append(bars_html(s["bars"]))
-    link = f'<p><a class="button" href="{e(s["link"]["href"])}" target="_blank" rel="noopener">{e(s["link"]["text"])}</a></p>' if s.get("link") else ""
+    links = s.get("links") or ([s["link"]] if s.get("link") else [])
+    link = ('<p class="links">' + "".join(f'<a class="button" href="{e(l["href"])}" target="_blank" rel="noopener">{e(l["text"])}</a>' for l in links) + '</p>') if links else ""
     if link and not s.get("link_last"):
         out.append(link)
     if s.get("quad"):
@@ -100,6 +106,13 @@ def screen_html(i, total, s, wid):
         out.append(f"<p>{fmt(p)}</p>")
     if link and s.get("link_last"):
         out.append(link)
+    if s.get("lookup"):
+        lid = f"{wid}-lk{i}"
+        out.append(f'<div class="lookup" data-kind="{e(s["lookup"])}"><label for="{lid}">Your first name</label>'
+                   f'<div class="lookup-row"><input id="{lid}" class="lookup-in" type="text" autocomplete="given-name" autocapitalize="words" placeholder="First name">'
+                   f'<button type="button" class="lookup-go">{e(s.get("lookup_button", "Show my progress"))}</button></div>'
+                   '<div class="lookup-out" aria-live="polite"></div></div>'
+                   '<fieldset class="check lookupcheck" hidden></fieldset>')
     c = s.get("check")
     if c and c.get("type") == "pick":
         sels = "".join(
@@ -143,7 +156,8 @@ def week_body(w, latest):
     screens = w["screens"][:1] + ([tables_screen(w)] if w.get("tables") else []) + w["screens"][1:]
     total = len(screens) + (1 if latest else 0)
     eyebrow = "This week" if latest else "Past week"
-    parts = [f'<div class="week" data-week="{e(w["date"])}">',
+    data = (f'<script id="focus-data" type="application/json">{json.dumps(w["secure"])}</script>' if latest and w.get("secure") else "")
+    parts = [data + f'<div class="week" data-week="{e(w["date"])}">',
              f'<p class="eyebrow">{eyebrow}</p><h1>{e(w["label"])}</h1>',
              f'<p class="meta">Read and complete by {e(site["confirm_by"])}</p>',
              f'<div class="progress" aria-hidden="true"><div class="bar"></div></div>',
@@ -215,4 +229,8 @@ for f in glob.glob(os.path.join(ROOT, "content", "pages", "*.json")):
             + f'<p><a href="{e(pg["source"])}" target="_blank" rel="noopener">{e(pg.get("source_text", "Official version on the Residential Living website"))}</a></p>')
     with open(os.path.join(ROOT, "pages", pg["slug"] + ".html"), "w") as out:
         out.write(page(pg["title"], body, prefix="../"))
-print("built", len(weeks), "week(s)")
+for w in previews:
+    os.makedirs(os.path.join(ROOT, "preview"), exist_ok=True)
+    with open(os.path.join(ROOT, "preview", w["preview"] + ".html"), "w") as f:
+        f.write(page(w["label"], week_body(w, latest=True), prefix="../", current="this", script=True, gate=w["date"]))
+print("built", len(weeks), "week(s)", f"+ {len(previews)} preview(s)" if previews else "")

@@ -75,6 +75,7 @@
   screens.forEach(function (s, i) {
     var check = s.querySelector(".check");
     if (!check) return;
+    if (check.classList.contains("lookupcheck")) return;
     if (check.classList.contains("picked")) {
       var sels = check.querySelectorAll("select"), pfb = check.querySelector(".feedback");
       function pgrade() {
@@ -142,6 +143,16 @@
 
   back.addEventListener("click", function () { show(state.step - 1, true); });
   next.addEventListener("click", function () { if (passed(state.step)) show(state.step + 1, true); });
+  // Lets other scripts (the progress lookups) unlock a screen.
+  window.FocusPager = {
+    markDone: function (section) {
+      var i = screens.indexOf(section);
+      if (i < 0) return;
+      state.done[i] = true;
+      if (i === state.step) next.disabled = false;
+      save();
+    }
+  };
   week.classList.add("paged");
   show(state.step, false);
 })();
