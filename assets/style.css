@@ -253,3 +253,5 @@ canvas.fw { position: fixed; inset: 0; width: 100vw; height: 100vh; pointer-even
   .result { padding: 16px; }
   .paged .screen.theme-zen, .screen.theme-zen { padding: 22px 16px; border-radius: 18px; }
 }
+.asof-top { margin: 0 0 14px; padding: 10px 12px; border-radius: 10px; background: #fff3c4; color: #4a3b00; font-weight: 600; font-size: 15px; line-height: 1.4; }
+@media (prefers-color-scheme: dark) { .asof-top { background: #3a3010; color: #ffe8a3; } }

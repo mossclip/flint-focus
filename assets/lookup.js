@@ -74,7 +74,7 @@
     else if (k.done > 0) { tone = "start"; msg = "<strong>You're off to a good start, " + esc(r.name) + ".</strong> Keep it going this week."; list = true; }
     else { tone = "zero"; msg = "<strong>" + esc(r.name) + ", we really need you to get started on these, please.</strong> Let James know if you need any help, or if something's going on that he should know about."; }
     out.classList.add("tone-" + tone);
-    out.innerHTML = '<p class="msg">' + msg + "</p>" + stat;
+    out.innerHTML = '<p class="asof-top">Updated ' + esc(d.asof) + ". If you've done more since then, thank you!</p>" + '<p class="msg">' + msg + "</p>" + stat;
     if (tone === "win" && r.twix) out.innerHTML += '<div class="treat">' + TWIX + "<p>This one's for you, " + esc(r.name) + ". Thank you!</p></div>";
     if (list) {
       var cols = el("div", "ticks");
@@ -82,7 +82,6 @@
         '<div><p class="tick-h no">Still to go (' + k.todo.length + ")</p><ul>" + k.todo.map(function (x) { return '<li class="no">' + esc(x) + "</li>"; }).join("") + "</ul></div>";
       out.appendChild(cols);
     }
-    out.appendChild(el("p", "asof", "Numbers as of " + esc(d.asof) + ". If you've done more since then, thank you!"));
     if (tone === "win") fireworks();
     return { node: out, done: true };
   }
