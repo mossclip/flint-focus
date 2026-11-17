@@ -91,20 +91,18 @@
     if (o.caught) {
       out.classList.add("tone-win");
       out.innerHTML = '<div class="allclear"><span class="bigcheck" aria-hidden="true">✓</span><p class="msg"><strong>You\'re all caught up, ' + esc(r.name) +
-        "!</strong> Every Office Hours reflection is in. Thank you.</p></div>";
-      out.appendChild(el("p", "asof", "Counted through the week of " + esc(d.oh_through) + ", as of " + esc(d.asof) + "."));
+        "!</strong> Every Office Hours reflection from the \'Cuse Chat #1 period is in. Thank you.</p></div>";
+      out.appendChild(el("p", "asof", "Counted for the \'Cuse Chat #1 period, through the week of " + esc(d.oh_through) + ", as of " + esc(d.asof) + "."));
       fireworks();
       return { node: out, done: true };
     }
     var miss = o.weeks.filter(function (w) { return !w.ok; }).length;
     out.classList.add("tone-start");
     out.innerHTML = '<p class="msg"><strong>Thanks for checking, ' + esc(r.name) + ".</strong> Roompact is missing " + (miss === 1 ? "one week" : miss + " weeks") +
-      ". Could you please submit " + (miss === 1 ? "it" : "them") + " right now, while you're here?</p>" +
-      '<ul class="weeks">' + o.weeks.map(function (w) { return '<li class="' + (w.ok ? "ok" : "no") + '">' + esc(w.l) + "</li>"; }).join("") + "</ul>" +
-      '<p class="hint">Submit one <strong>RA Office Hour Weekly Reflection Form</strong> for each red week, using the date and time you held office hours that week. If a break kept you from holding them, use the date you would have held them and add a note saying why.</p>' +
-      '<p><a class="button" href="https://roompact.com/forms" target="_blank" rel="noopener">Open Roompact</a></p>';
-    out.appendChild(el("p", "asof", "Counted through the week of " + esc(d.oh_through) + ", as of " + esc(d.asof) + ". This week isn't counted yet."));
-    var b = el("button", "confirm", "I've submitted my missing weeks"); b.type = "button";
+      " from the 'Cuse Chat #1 period. Kim closed the Office Hours form today, so " + (miss === 1 ? "it" : "they") + " can no longer be submitted. Hopefully we can stay on top of them better moving forward.</p>" +
+      '<ul class="weeks">' + o.weeks.map(function (w) { return '<li class="' + (w.ok ? "ok" : "no") + '">' + esc(w.l) + "</li>"; }).join("") + "</ul>";
+    out.appendChild(el("p", "asof", "Counted for the 'Cuse Chat #1 period, the weeks of " + esc(d.oh_first || "Aug 31") + " through " + esc(d.oh_through) + ", as of " + esc(d.asof) + "."));
+    var b = el("button", "confirm", "Got it"); b.type = "button";
     b.addEventListener("click", function () { b.disabled = true; b.textContent = "Thank you!"; if (window.FocusPager) FocusPager.markDone(section); });
     out.appendChild(b);
     return { node: out, done: false };
